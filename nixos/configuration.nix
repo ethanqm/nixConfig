@@ -111,6 +111,8 @@
 
     tree
 
+    mullvad-vpn
+
     kitty
     firefox
     vlc mpv
