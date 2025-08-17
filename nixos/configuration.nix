@@ -114,7 +114,7 @@
     mullvad-vpn
 
     kitty
-    firefox
+    firefox microsoft-edge
     vlc mpv
 
     kdePackages.kdeconnect-kde
@@ -133,7 +133,6 @@
 
     kdePackages.dolphin
     discord
-
   ];
   environment.sessionVariables = {
     EDITOR = "vim";
@@ -179,6 +178,7 @@
   };
 
   programs.kdeconnect.enable = true;
+  programs.nix-ld.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
