@@ -23,13 +23,18 @@
     nixosConfigurations = {
       lapnix = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs system; };
-        modules = [ ./nixos/configuration.nix ];
+        modules = [ 
+	./nixos/configuration.nix
+	];
       };
     };
     homeConfigurations = {
       user = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        modules = [ ./home.nix ];
+        modules = [ 
+	./home.nix
+	./home-modules/xvim.nix
+	];
       };
     };
   };

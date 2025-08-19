@@ -77,71 +77,6 @@
   #  /etc/profiles/per-user/user/etc/profile.d/hm-session-vars.sh
   #
 
-  gtk = {
-    enable = true;
-  };
-
-  #HYPRLAND
-  wayland.windowManager.hyprland = {
-    enable = true;
-    settings = {
-      # autostart
-      exec-once = [
-        "waybar &"
-        "hyprpaper"
-        "nm-applet --indicator"
-        "dunst"
-      ];
-      # rice
-      decoration = {
-        rounding = 5;
-        active_opacity = 1.0;
-        inactive_opacity = 0.5;
-        shadow = {
-          enabled = true;
-          range = 4;
-          render_power = 1;
-          color = "rgba(1a1a1aee)";         
-        };
-        blur = {
-          enabled = true;
-          size = 3;
-          passes = 1;
-          vibrancy = 1.696;
-        };
-      };
-      # hotkeys
-      "$mod" = "super";
-      bind = [
-        "$mod, Q, exec, $TERM"
-        "$mod, C, killactive"
-        "$mod, M, exit"
-        "$mod, F, exec, $FILE_BROWSER"
-        "$mod, B, exec, $BROWSER"
-        "$mod, SPACE, exec, $MENU"
-        "$mod, V, togglefloating"
-        "$mod, O, fullscreen, 1"
-      ];
-      bindm = [
-        "$mod, ALT, resizewindow"
-        "$mod, SHIFT, movewindow"
-      ];
-    };
-  };
-  programs.waybar.settings.main = {
-    modules-right = [ "nm-applet" "clock" ];
-  };
-
-  services = {
-    hyprpaper = {
-      enable = true;
-      settings = {
-        preload = ["~/Pictures/aesthetic-sailor-moon-3z3wzc7rf9fipos2.jpg"];
-        wallpaper = [", ~/Pictures/aesthetic-sailor-moon-3z3wzc7rf9fipos2.jpg"];
-      };
-    };
-  };
-
   fonts.fontconfig.enable = true;
 
   programs.git = {
@@ -151,42 +86,6 @@
     extraConfig = {
       init.defaultBranch = "main";
     };
-  };
-
-  # vim
-  programs.vim = {
-   enable = true;
-   settings = {
-     tabstop = 2;
-     shiftwidth = 2;
-     number = true;
-     relativenumber = true;
-     mouse = "a";
-   };
-   extraConfig = ''
-     set syntax=true
-     set clipboard+=unnamedplus
-     set splitbelow splitright
-     
-     " sanskrit binds
-     inoremap <C-k>.l ḷ
-     inoremap <C-k>.r ṛ
-     inoremap <C-k>.m ṃ
-     inoremap <C-k>.n ṇ
-     inoremap <C-k>.s ṣ
-     inoremap <C-k>.t ṭ
-     inoremap <C-k>.d ḍ
-     inoremap <C-k>.h ḥ
-     
-     inoremap <C-k>.L Ḷ
-     inoremap <C-k>.R Ṛ
-     inoremap <C-k>.M Ṃ
-     inoremap <C-k>.N Ṇ
-     inoremap <C-k>.S Ṣ
-     inoremap <C-k>.T Ṭ
-     inoremap <C-k>.D Ḍ
-     inoremap <C-k>.H Ḥ
-   '';
   };
 
 
