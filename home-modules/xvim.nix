@@ -1,13 +1,13 @@
 { config, pkgs, ... }:
 let
   commonSettings = {
-     tabstop = 2;
-     shiftwidth = 2;
-     number = true;
-     relativenumber = true;
-     ignorecase = true;
-     mouse = "a";
-   };
+    tabstop = 2;
+    shiftwidth = 2;
+    number = true;
+    relativenumber = true;
+    ignorecase = true;
+    mouse = "a";
+  };
   sanskritBinds = '' 
      " sanskrit binds
      inoremap <C-k>.l ḷ
@@ -18,7 +18,7 @@ let
      inoremap <C-k>.t ṭ
      inoremap <C-k>.d ḍ
      inoremap <C-k>.h ḥ
-     
+
      inoremap <C-k>.L Ḷ
      inoremap <C-k>.R Ṛ
      inoremap <C-k>.M Ṃ
@@ -27,17 +27,18 @@ let
      inoremap <C-k>.T Ṭ
      inoremap <C-k>.D Ḍ
      inoremap <C-k>.H Ḥ
-   '';
-   extraSettings = ''
+  '';
+  extraSettings = ''
      set syntax=true
      set clipboard+=unnamedplus
+     set nowrap
      set splitbelow splitright
-   '';
+  '';
 in
-{
-  programs.vim = {
-    enable = true;
-    settings = commonSettings;
-    extraConfig = extraSettings + sanskritBinds;
-  };
-}
+  {
+    programs.vim = {
+      enable = true;
+      settings = commonSettings;
+      extraConfig = extraSettings + sanskritBinds;
+    };
+  }
