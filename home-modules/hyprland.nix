@@ -35,7 +35,7 @@
 
 	# https://wiki.hyprland.org/Configuring/Variables/#animations
 	animations = {
-	    enabled = "yes";#, please :)
+      #enabled = "yes";#, please :)
 
     # Default animations, see https://wiki.hyprland.org/Configuring/Animations/ for more
 
@@ -127,8 +127,9 @@
       ];
     };
   };
+  };
   programs.waybar.settings.main = {
-    modules-right = [ "nm-applet" "clock" ];
+    modules-right = [ "clock" "nm-applet" ];
   };
 
   services = {
@@ -140,5 +141,4 @@
       };
     };
   };
-
 }
