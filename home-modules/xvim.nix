@@ -5,6 +5,7 @@ let
      shiftwidth = 2;
      number = true;
      relativenumber = true;
+     ignorecase = true;
      mouse = "a";
    };
   sanskritBinds = '' 
