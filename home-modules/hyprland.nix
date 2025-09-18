@@ -105,6 +105,8 @@
         "$mod, mouse_up, workspace, e-1"
       ];
       bindm = [
+        "$mod, ALT_R, resizewindow"
+        "$mod, SHIFT_R, movewindow"
         "$mod, ALT_L, resizewindow"
         "$mod, SHIFT_L, movewindow"
       ];
