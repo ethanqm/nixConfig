@@ -25,6 +25,14 @@
         specialArgs = { inherit inputs system; };
         modules = [ 
 	./nixos/configuration.nix
+        ./nixos/lapnix-hardware-configuration.nix
+	];
+      };
+      mori = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs system; };
+        modules = [ 
+	./nixos/configuration.nix
+        ./nixos/mori-hardware-configuration.nix
 	];
       };
     };
