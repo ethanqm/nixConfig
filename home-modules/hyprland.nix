@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 {
   gtk = {
-    enable = true;
+    #enable = true;
   };
 
   #HYPRLAND
@@ -19,7 +19,7 @@
       decoration = {
         rounding = 5;
         active_opacity = 1.0;
-        inactive_opacity = 0.5;
+        inactive_opacity = 1.0;
         shadow = {
           enabled = true;
           range = 4;
