@@ -24,26 +24,26 @@
       lapnix = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs system; };
         modules = [ 
-	./nixos/configuration.nix
-        ./nixos/lapnix-hardware-configuration.nix
-	];
+          ./nixos/configuration.nix
+          ./nixos/lapnix-hardware-configuration.nix
+        ];
       };
       mori = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs system; };
         modules = [ 
-	./nixos/configuration.nix
-        ./nixos/mori-hardware-configuration.nix
-	];
+          ./nixos/configuration.nix
+          ./nixos/mori-hardware-configuration.nix
+        ];
       };
     };
     homeConfigurations = {
       user = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [ 
-	./home.nix
-	#./home-modules/xvim.nix
-	#./home-modules/hyprland.nix
-	];
+          ./home.nix
+          #./home-modules/xvim.nix
+          #./home-modules/hyprland.nix
+        ];
       };
     };
   };

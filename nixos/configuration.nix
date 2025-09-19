@@ -115,14 +115,14 @@
 
     kitty
     firefox microsoft-edge
-    vlc mpv
+    vlc mpv youtube-music
 
     kdePackages.kdeconnect-kde
 
     wayland xwayland
     hyprland wofi
+    hyprshade
     
-    steam wine 
 
     hyprpaper
     waybar 
@@ -133,6 +133,7 @@
 
     kdePackages.dolphin
     discord
+    steam wine 
   ];
   environment.sessionVariables = {
     EDITOR = "vim";

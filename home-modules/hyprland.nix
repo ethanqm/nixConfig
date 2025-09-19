@@ -132,13 +132,11 @@
     modules-right = [ "clock" "nm-applet" ];
   };
 
-  services = {
-    hyprpaper = {
+  services.hyprpaper = {
       enable = true;
       settings = {
-        preload = ["~/nix/home-manager/wallpapers/aesthetic-sailor-moon-3z3wzc7rf9fipos2.jpg"];
-        wallpaper = [", ~/nix/home-manager/wallpapers/aesthetic-sailor-moon-3z3wzc7rf9fipos2.jpg"];
+        preload = ["~/nix/home-modules/wallpapers/aesthetic-sailor-moon-3z3wzc7rf9fipos2.jpg"];
+        wallpaper = [", ~/nix/home-modules/wallpapers/aesthetic-sailor-moon-3z3wzc7rf9fipos2.jpg"];
       };
-    };
   };
 }
