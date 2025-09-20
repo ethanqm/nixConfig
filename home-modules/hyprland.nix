@@ -103,13 +103,16 @@
         # Scroll through existing workspaces with mainMod + scroll
         "$mod, mouse_down, workspace, e+1"
         "$mod, mouse_up, workspace, e-1"
+        # screen rotation script # numlock insensitive :(
+        "SUPER ALT, KP_END, exec, sh /home/user/scripts/screen_rotate/hypr_rotationToggle.sh left"
+        "SUPER ALT, KP_DOWN, exec, sh /home/user/scripts/screen_rotate/hypr_rotationToggle.sh right"
       ];
       bindm = [
         "$mod, ALT_R, resizewindow"
         "$mod, SHIFT_R, movewindow"
         "$mod, ALT_L, resizewindow"
         "$mod, SHIFT_L, movewindow"
-      ];
+    ];
       bindel = [
         # Laptop multimedia keys for volume and LCD brightness
         ",XF86AudioRaiseVolume, exec, wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"

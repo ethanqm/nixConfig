@@ -112,6 +112,7 @@
     tree
 
     mullvad-vpn
+    qbittorrent
 
     kitty
     firefox microsoft-edge
