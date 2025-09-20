@@ -32,6 +32,7 @@ let
      set syntax=true
      set clipboard+=unnamedplus
      set nowrap
+     set noswapfile
      set splitbelow splitright
   '';
 in
