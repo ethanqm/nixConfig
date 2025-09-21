@@ -133,6 +133,7 @@
     vlc mpv ffmpeg
     youtube-music
     yt-dlp
+    hakuneko # dl + read: manga + comic
 
     # wlan connect
     kdePackages.kdeconnect-kde
@@ -157,9 +158,6 @@
     mullvad-vpn
     qbittorrent
     discord
-
-    hakuneko # dl + read: manga + comic
-
 
     # gaming
     steam wine 
