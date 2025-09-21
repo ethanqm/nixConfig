@@ -124,7 +124,6 @@
     hyprland wofi
     hyprshade
     
-
     hyprpaper
     waybar 
     networkmanagerapplet
@@ -133,6 +132,9 @@
     htop neofetch
 
     kdePackages.dolphin
+
+    hakuneko
+
     discord
     steam wine 
   ];
