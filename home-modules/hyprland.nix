@@ -14,6 +14,8 @@
         "hyprpaper"
         "nm-applet --indicator"
         "dunst"
+        "mullvad-vpn"
+        "discord --start-minimized"
       ];
       # rice
       decoration = {
@@ -98,14 +100,22 @@
         "$mod SHIFT, 9, movetoworkspace, 9"
         "$mod SHIFT, 0, movetoworkspace, 10"
         # Example special workspace (scratchpad)
-        "$mod, S, togglespecialworkspace, magic"
-        "$mod SHIFT, S, movetoworkspace, special:magic"
+        #"$mod, S, togglespecialworkspace, magic"
+        #"$mod SHIFT, S, movetoworkspace, special:magic"
         # Scroll through existing workspaces with mainMod + scroll
         "$mod, mouse_down, workspace, e+1"
         "$mod, mouse_up, workspace, e-1"
+
         # screen rotation script # numlock insensitive :(
         "SUPER ALT, KP_END, exec, sh /home/user/scripts/screen_rotate/hypr_rotationToggle.sh left"
         "SUPER ALT, KP_DOWN, exec, sh /home/user/scripts/screen_rotate/hypr_rotationToggle.sh right"
+        # clear errors
+        "SUPER, ESC, exec, hyprctl seterror disable"
+        # hyprshader crt
+        "SUPER ALT, S, exec, hyprshade toggle retro"
+        # hyprshot
+        "SUPER SHIFT, S, exec, hyprshot --region"
+        ", PRINT, exec, hyprshot -m output"
       ];
       bindm = [
         "$mod, ALT_R, resizewindow"
@@ -129,6 +139,10 @@
         ", XF86AudioPlay, exec, playerctl play-pause"
         ", XF86AudioPrev, exec, playerctl previous"
       ];
+      debug = {
+        # default 2 causes glitches with distortion shaders
+        damage_tracking = 1; 
+      };
     };
   };
   programs.waybar.settings.main = {

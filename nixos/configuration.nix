@@ -110,33 +110,65 @@
     git gh glab git-credential-oauth
 
     tree
+    htop neofetch
 
-    mullvad-vpn
-    qbittorrent
-
-    kitty
-    firefox microsoft-edge
-    vlc mpv youtube-music
-
-    kdePackages.kdeconnect-kde
-
+    # hyprland
     wayland xwayland
     hyprland wofi
     hyprshade
-    
     hyprpaper
+    hyprshot
     waybar 
     networkmanagerapplet
     dunst libnotify
+    kitty
+    #playerctl # kb media keys
+    brightnessctl # screen brightness keys
 
-    htop neofetch
-
+    # file explorer
     kdePackages.dolphin
+    xfce.thunar
 
-    hakuneko
+    # media
+    vlc mpv ffmpeg
+    youtube-music
+    yt-dlp
 
+    # wlan connect
+    kdePackages.kdeconnect-kde
+
+    obsidian # note taking
+
+    # editing
+    audacity
+    krita
+    inkscape
+    davinci-resolve
+
+    # dev
+    python314
+    nodejs_24
+    zig
+    gdb lldb
+    ghidra-bin
+
+    # web
+    firefox 
+    mullvad-vpn
+    qbittorrent
     discord
+
+    hakuneko # dl + read: manga + comic
+
+
+    # gaming
     steam wine 
+    itch
+    lutris
+    radeontop
+
+    # work
+    microsoft-edge
   ];
   environment.sessionVariables = {
     EDITOR = "vim";
@@ -168,6 +200,7 @@
     nerd-fonts.noto
     nerd-fonts.hack
     nerd-fonts.ubuntu
+    nerd-fonts.inconsolata
     #nerd-fonts.mplus
   ];
 
