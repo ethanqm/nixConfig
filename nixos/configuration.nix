@@ -82,7 +82,7 @@
   users.users.user = {
     isNormalUser = true;
     description = "user";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "boinc" ];
     packages = with pkgs; [
  
     ];
@@ -144,7 +144,7 @@
     audacity
     krita
     inkscape
-    davinci-resolve
+    davinci-resolve # todo: https://nixos.wiki/wiki/DaVinci_Resolve
 
     # dev
     python314
@@ -164,6 +164,10 @@
     itch
     lutris
     radeontop
+    obs-studio
+
+    #compute
+    boinc
 
     # work
     microsoft-edge
@@ -228,6 +232,11 @@
   # Enable the OpenSSH daemon.
    services.openssh.enable = true;
    programs.ssh.startAgent = true;
+
+   # compute boinc
+   services.boinc = {
+     enable = true;
+   };
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];

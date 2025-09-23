@@ -8,10 +8,18 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
+  boot.kernelPackages = pkgs.linuxPackages_6_16; #kernel sept 2025
   boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "usb_storage" "usbhid" "sd_mod" ];
-  boot.initrd.kernelModules = [ ];
+  boot.initrd.kernelModules = [ "amdgpu" ]; # rx580
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
+
+  # amd rx580
+  services.xserver.enable = true;
+  services.xserver.videoDrivers = [ "amdgpu" ];
+  hardware.graphics.extraPackages = with pkgs; [ rocmPackages.clr.icd ];
+  environment.systemPackages = with pkgs; [ clinfo ];
+  environment.variables = { ROC_ENABLE_PRE_VEGA = "1"; };
 
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/b26919e0-f075-4b67-8594-e219a6405824";
@@ -29,7 +37,7 @@
       fsType = "ext4";
     };
 
-  fileSystems."/home/Games" =
+  fileSystems."/home/user/GAMES" =
     { device = "/dev/disk/by-uuid/310887b3-481f-4fbf-8744-cdf73dc6c673";
       fsType = "ext4";
     };
