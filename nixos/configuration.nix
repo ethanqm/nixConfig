@@ -109,7 +109,7 @@
     wget
     git gh glab git-credential-oauth
 
-    tree
+    tree file
     htop neofetch
 
     # hyprland
