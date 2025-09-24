@@ -4,7 +4,7 @@
 # effectively "output" config for portability or inspection
 
 function collect () {
-	cp -L $1 "dots/$2"
+	cp -L $1 "dots/$(hostname)/$2"
 }
 
 # vim ~/.vimrc
