@@ -16,6 +16,7 @@
         "dunst"
         "mullvad-vpn"
         "discord --start-minimized"
+        "kdeconnect-indicator"
       ];
       # rice
       decoration = {
@@ -74,7 +75,7 @@
       "$mod" = "super";
       bind = [
         "$mod, Q, exec, $TERM"
-        "$mod, C, killactive"
+        "$mod, DELETE, killactive"
         "$mod, M, exit"
         "$mod, F, exec, $FILE_BROWSER"
         "$mod, B, exec, $BROWSER"
@@ -110,7 +111,7 @@
         "SUPER ALT, KP_END, exec, sh /home/user/scripts/screen_rotate/hypr_rotationToggle.sh left"
         "SUPER ALT, KP_DOWN, exec, sh /home/user/scripts/screen_rotate/hypr_rotationToggle.sh right"
         # clear errors
-        "SUPER, ESC, exec, hyprctl seterror disable"
+        "SUPER, ESCAPE, exec, hyprctl seterror disable"
         # hyprshader crt
         "SUPER ALT, S, exec, hyprshade toggle retro"
         # hyprshot

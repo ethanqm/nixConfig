@@ -165,6 +165,7 @@
     lutris
     radeontop
     obs-studio
+    protonup
 
     #compute
     boinc
@@ -172,6 +173,10 @@
     # work
     microsoft-edge
   ];
+  nix.extraOptions = ''
+     keep-outputs = true
+     keep-derivations = true
+  ''; # don't gc build components
   environment.sessionVariables = {
     EDITOR = "vim";
     BROWSER = "firefox";
