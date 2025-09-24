@@ -9,8 +9,8 @@ function collect () {
 
 # vim ~/.vimrc
 vimFile=($(cat ~/.nix-profile/bin/vim))
-vimrcLoc=$(echo ${vimFile[6]} | sed "s/'//g ") 
+vimrcLoc=$(echo ${vimFile[6]} | sed "s/'//g") 
 collect $vimrcLoc ".vimrc"
 
-#hyprland hyprland.conf
+# hyprland hyprland.conf
 collect ~/.config/hypr/hyprland.conf "hyprland.conf"
