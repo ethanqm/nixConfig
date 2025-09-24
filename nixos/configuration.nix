@@ -128,6 +128,7 @@
     # file explorer
     kdePackages.dolphin
     xfce.thunar
+    kdePackages.gwenview libwebp
 
     # media
     vlc mpv ffmpeg
