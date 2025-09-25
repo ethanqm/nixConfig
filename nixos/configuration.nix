@@ -97,7 +97,15 @@
   };
 
   # Install firefox.
-  programs.firefox.enable = true;
+  programs.firefox = {
+    enable = true;
+    # look more into this bc default won't
+    # allow typing file path
+    # https://nixos.wiki/wiki/Firefox
+    #preferences = {
+    #  "widget.use-xdg-desktop-portal.file-picker" = 1;
+    #};
+  };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -122,7 +130,7 @@
     networkmanagerapplet
     dunst libnotify
     kitty
-    #playerctl # kb media keys
+    playerctl # kb media keys
     brightnessctl # screen brightness keys
 
     # file explorer
@@ -149,7 +157,7 @@
 
     # dev
     python314
-    nodejs_24
+    nodejs_24 bun
     zig
     gdb lldb
     ghidra-bin
@@ -173,6 +181,7 @@
 
     # work
     microsoft-edge
+    zoom-us
   ];
   nix.extraOptions = ''
      keep-outputs = true

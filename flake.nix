@@ -41,8 +41,6 @@
         inherit pkgs;
         modules = [ 
           ./home.nix
-          #./home-modules/xvim.nix
-          #./home-modules/hyprland.nix
         ];
       };
     };

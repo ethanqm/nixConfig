@@ -36,6 +36,11 @@
           vibrancy = 1.696;
         };
 
+        layerrule = [
+          "blur,waybar"
+          "blur,wofi"
+        ];
+
         # https://wiki.hyprland.org/Configuring/Variables/#animations
         animations = {
         #enabled = "yes";#, please :)

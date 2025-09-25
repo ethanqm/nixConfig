@@ -11,7 +11,7 @@
         };
         pulseaudio = {
           # scroll-step = 1; // %; can be a float
-          format = "{volume}% {icon} {format_source}";
+          format = "{volume}% {icon}  {format_source}";
           format-bluetooth = "{volume}% {icon} {format_source}";
           format-bluetooth-muted = " {icon} {format_source}";
           format-muted = " {format_source}";
@@ -49,11 +49,12 @@
       /* `otf-font-awesome` is required to be installed for icons */
       font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
       font-size: 13px;
+      border-radius: 0px;
       }
 
       window#waybar {
       background-color: rgba(43, 48, 59, 0.5);
-      border-bottom: 3px solid rgba(100, 114, 125, 0.5);
+      /*border-bottom: 3px solid rgba(100, 114, 125, 0.5);*/
       color: #ffffff;
       transition-property: background-color;
       transition-duration: .5s;
@@ -143,6 +144,7 @@
 #mpd {
       padding: 0 10px;
       color: #ffffff;
+      border-radius: 25px;
       }
 
 #window,

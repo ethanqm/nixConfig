@@ -34,12 +34,35 @@ let
      set nowrap
      set noswapfile
      set splitbelow splitright
+
+     "set directory tree view
+     let g:netrw_liststyle= 3
+  '';
+  lspBinds = ''
+  let g:lsp_diagnostics_enabled = 0
+  function! s:on_lsp_buffer_enabled() abort
+    setlocal omnifunc=lsp#complete
+    nmap <buffer> gd <plug>(lsp-definition)
+    nmap <buffer> gr <plug>(lsp-references)
+    nmap <buffer> K <plug>(lsp-hover)
+  endfunction
+
+  augroup lsp_install
+    au!
+    " call s:on_lsp_buffer_enabled only for languages that has the server registered.
+    autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
+  augroup END
+
   '';
 in
   {
     programs.vim = {
       enable = true;
       settings = commonSettings;
-      extraConfig = extraSettings + sanskritBinds;
+      extraConfig = 
+          extraSettings 
+          + sanskritBinds
+          + lspBinds;
+      plugins = with pkgs.vimPlugins; [ vim-lsp vim-lsp-settings ];
     };
   }
