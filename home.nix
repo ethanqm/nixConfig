@@ -4,6 +4,7 @@
   imports = [
     ./home-modules/xvim.nix
     ./home-modules/hyprland.nix
+    ./home-modules/waybar.nix
   ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.

@@ -146,15 +146,13 @@
       };
     };
   };
-  programs.waybar.settings.main = {
-    modules-right = [ "clock" "nm-applet" ];
-  };
+
 
   services.hyprpaper = {
-      enable = true;
-      settings = {
-        preload = ["~/nix/home-modules/wallpapers/aesthetic-sailor-moon-3z3wzc7rf9fipos2.jpg"];
-        wallpaper = [", ~/nix/home-modules/wallpapers/aesthetic-sailor-moon-3z3wzc7rf9fipos2.jpg"];
-      };
+    enable = true;
+    settings = {
+      preload = ["~/nix/home-modules/wallpapers/aesthetic-sailor-moon-3z3wzc7rf9fipos2.jpg"];
+      wallpaper = [", ~/nix/home-modules/wallpapers/aesthetic-sailor-moon-3z3wzc7rf9fipos2.jpg"];
+    };
   };
 }
