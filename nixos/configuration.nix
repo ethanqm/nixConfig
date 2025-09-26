@@ -24,6 +24,14 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
+  networking.networkmanager.dns = "none";
+  networking.nameservers =[
+    # Cloudflare
+    "1.1.1.1"
+    "1.0.0.1"
+    "2606:4700:4700::1111"
+    "2606:4700:4700::1001"
+  ];
 
   # Set your time zone.
   time.timeZone = "Australia/Melbourne";
