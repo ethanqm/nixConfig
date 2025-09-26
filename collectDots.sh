@@ -4,7 +4,7 @@
 # effectively "output" config for portability or inspection
 
 function collect () {
-	cp -L $1 "dots/$(hostname)/$2"
+	cp -L -f $1 "dots/$(hostname)/$2"
 }
 
 # vim ~/.vimrc
@@ -14,3 +14,8 @@ collect $vimrcLoc ".vimrc"
 
 # hyprland hyprland.conf
 collect ~/.config/hypr/hyprland.conf "hyprland.conf"
+
+# waybar config and style.css
+collect ~/.config/waybar/config "waybar/config"
+collect ~/.config/waybar/style.css "waybar/style.css"
+

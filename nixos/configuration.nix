@@ -158,9 +158,10 @@
     # dev
     python314
     nodejs_24 bun
-    zig
+    zig zls
     gdb lldb
     ghidra-bin
+    nixd # lsp
 
     # web
     firefox 

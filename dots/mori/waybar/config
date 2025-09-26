@@ -1,0 +1,50 @@
+[
+  {
+    "custom/power": {
+      "format": "⏻ ",
+      "menu": "on-click",
+      "menu-actions": {
+        "hibernate": "systemctl hibernate",
+        "reboot": "reboot",
+        "shutdown": "shutdown",
+        "suspend": "systemctl suspend"
+      },
+      "menu-file": "$HOME/.config/waybar/power_menu.xml",
+      "tooltip": false
+    },
+    "height": 30,
+    "modules-right": [
+      "pulseaudio",
+      "clock",
+      "nm-applet",
+      "tray",
+      "custom/power"
+    ],
+    "pulseaudio": {
+      "format": "{volume}% {icon}  {format_source}",
+      "format-bluetooth": "{volume}% {icon} {format_source}",
+      "format-bluetooth-muted": " {icon} {format_source}",
+      "format-icons": {
+        "car": "",
+        "default": [
+          "",
+          "",
+          ""
+        ],
+        "hands-free": "",
+        "headphone": "",
+        "headset": "",
+        "phone": "",
+        "portable": ""
+      },
+      "format-muted": " {format_source}",
+      "format-source": "{volume}% ",
+      "format-source-muted": "",
+      "on-click": "pavucontrol"
+    },
+    "spacing": 4,
+    "tray": {
+      "spacing": 10
+    }
+  }
+]

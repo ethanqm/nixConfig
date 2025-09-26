@@ -38,8 +38,10 @@ let
      "set directory tree view
      let g:netrw_liststyle= 3
   '';
-  lspBinds = ''
+  lsp = ''
   let g:lsp_diagnostics_enabled = 0
+  let g:lsp_use_native_client = 1
+
   function! s:on_lsp_buffer_enabled() abort
     setlocal omnifunc=lsp#complete
     nmap <buffer> gd <plug>(lsp-definition)
@@ -52,7 +54,6 @@ let
     " call s:on_lsp_buffer_enabled only for languages that has the server registered.
     autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
   augroup END
-
   '';
 in
   {
@@ -62,7 +63,7 @@ in
       extraConfig = 
           extraSettings 
           + sanskritBinds
-          + lspBinds;
+          + lsp;
       plugins = with pkgs.vimPlugins; [ vim-lsp vim-lsp-settings ];
     };
   }
