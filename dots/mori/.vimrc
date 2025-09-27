@@ -17,8 +17,9 @@ set nowrap
 set noswapfile
 set splitbelow splitright
 
-"set directory tree view
-let g:netrw_liststyle= 3
+
+nnoremap <space> <Nop>
+let mapleader=" "
 " sanskrit binds
 inoremap <C-k>.l ḷ
 inoremap <C-k>.r ṛ
@@ -52,4 +53,24 @@ augroup lsp_install
   " call s:on_lsp_buffer_enabled only for languages that has the server registered.
   autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
 augroup END
+"FILE TREE
+"" set directory tree view
+let g:netrw_liststyle= 3
+"" hide banner
+let g:netrw_banner= 0
+"" open in prev window
+let g:netrw_browse_split= 4
+"" default size
+let g:netrw_winsize= 25
+"" open vert
+let g:netrw_altv= 1
+
+"open on launch (don't `vim .`)
+augroup ProjectDrawer
+  autocmd!
+  autocmd VimEnter * :Lexplore
+augroup END
+
+" bind open
+nnoremap <leader>a :Lexplore<cr>
 
