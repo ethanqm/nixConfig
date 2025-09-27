@@ -8,6 +8,10 @@ let
     ignorecase = true;
     mouse = "a";
   };
+  binds = '' 
+    nnoremap <space> <Nop>
+    let mapleader=" "
+  '';
   sanskritBinds = '' 
      " sanskrit binds
      inoremap <C-k>.l ḷ
@@ -34,26 +38,45 @@ let
      set nowrap
      set noswapfile
      set splitbelow splitright
-
-     "set directory tree view
-     let g:netrw_liststyle= 3
   '';
   lsp = ''
-  let g:lsp_diagnostics_enabled = 0
-  let g:lsp_use_native_client = 1
+     let g:lsp_diagnostics_enabled = 0
+     let g:lsp_use_native_client = 1
 
-  function! s:on_lsp_buffer_enabled() abort
-    setlocal omnifunc=lsp#complete
-    nmap <buffer> gd <plug>(lsp-definition)
-    nmap <buffer> gr <plug>(lsp-references)
-    nmap <buffer> K <plug>(lsp-hover)
-  endfunction
+     function! s:on_lsp_buffer_enabled() abort
+       setlocal omnifunc=lsp#complete
+       nmap <buffer> gd <plug>(lsp-definition)
+       nmap <buffer> gr <plug>(lsp-references)
+       nmap <buffer> K <plug>(lsp-hover)
+     endfunction
 
-  augroup lsp_install
-    au!
-    " call s:on_lsp_buffer_enabled only for languages that has the server registered.
-    autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
-  augroup END
+     augroup lsp_install
+       au!
+       " call s:on_lsp_buffer_enabled only for languages that has the server registered.
+       autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
+     augroup END
+  '';
+  filetree = ''
+     "FILE TREE
+     "" set directory tree view
+     let g:netrw_liststyle= 3
+     "" hide banner
+     let g:netrw_banner= 0
+     "" open in prev window
+     let g:netrw_browse_split= 4
+     "" default size
+     let g:netrw_winsize= 25
+     "" open vert
+     let g:netrw_altv= 1
+
+     " open on launch (don't `vim .`)
+     augroup ProjectDrawer
+       autocmd!
+       autocmd VimEnter * :Lexplore
+     augroup END
+
+     " bind open/close toggle
+     nnoremap <leader>a :Lexplore<cr>
   '';
 in
   {
@@ -62,8 +85,10 @@ in
       settings = commonSettings;
       extraConfig = 
           extraSettings 
+          + binds
           + sanskritBinds
-          + lsp;
+          + lsp
+          + filetree;
       plugins = with pkgs.vimPlugins; [ vim-lsp vim-lsp-settings ];
     };
   }
