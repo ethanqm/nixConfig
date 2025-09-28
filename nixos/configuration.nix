@@ -25,8 +25,8 @@
   # Enable networking
   networking.networkmanager.enable = true;
   networking.networkmanager.dns = "none";
-  networking.nameservers =[
-    # Cloudflare
+  networking.nameservers = [
+    # Cloudflare DNS
     "1.1.1.1"
     "1.0.0.1"
     "2606:4700:4700::1111"
@@ -126,7 +126,8 @@
     git gh glab git-credential-oauth
 
     tree file
-    htop neofetch
+    htop
+    neofetch
 
     # hyprland
     wayland xwayland
@@ -144,6 +145,7 @@
     # file explorer
     kdePackages.dolphin
     xfce.thunar
+    ## image viewer
     kdePackages.gwenview libwebp libheif
 
     # media
@@ -162,6 +164,7 @@
     krita
     inkscape
     davinci-resolve # todo: https://nixos.wiki/wiki/DaVinci_Resolve
+    blender
 
     # dev
     python314
