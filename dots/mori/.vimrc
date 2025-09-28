@@ -16,11 +16,10 @@ set clipboard+=unnamedplus
 set nowrap
 set noswapfile
 set splitbelow splitright
-
-
+"BINDS
 nnoremap <space> <Nop>
 let mapleader=" "
-" sanskrit binds
+"SANSKRIT BINDS
 inoremap <C-k>.l ḷ
 inoremap <C-k>.r ṛ
 inoremap <C-k>.m ṃ
@@ -38,6 +37,13 @@ inoremap <C-k>.S Ṣ
 inoremap <C-k>.T Ṭ
 inoremap <C-k>.D Ḍ
 inoremap <C-k>.H Ḥ
+"WINDOW
+"" resize with ctrl-arrowkey
+nnoremap <silent> <C-left> :vertical resize -3<CR>
+nnoremap <silent> <C-right> :vertical resize +3<CR>
+nnoremap <silent> <C-up> :resize -3<CR>
+nnoremap <silent> <C-down> :resize +3<CR>
+"LSP
 let g:lsp_diagnostics_enabled = 0
 let g:lsp_use_native_client = 1
 
@@ -54,6 +60,9 @@ augroup lsp_install
   autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
 augroup END
 "FILE TREE
+"" thanks: 
+""" https://shapeshed.com/vim-netrw/ 
+""" https://vonheikemen.github.io/devlog/tools/using-netrw-vim-builtin-file-explorer/
 "" set directory tree view
 let g:netrw_liststyle= 3
 "" hide banner
@@ -61,16 +70,18 @@ let g:netrw_banner= 0
 "" open in prev window
 let g:netrw_browse_split= 4
 "" default size
-let g:netrw_winsize= 25
+let g:netrw_winsize=-25
 "" open vert
 let g:netrw_altv= 1
+" fix opening faraway files
+let g:netrw_keepdir = 0
 
-"open on launch (don't `vim .`)
+" open on launch (don't `vim .`)
 augroup ProjectDrawer
   autocmd!
   autocmd VimEnter * :Lexplore
 augroup END
 
-" bind open
+" bind open/close toggle
 nnoremap <leader>a :Lexplore<cr>
 
