@@ -128,6 +128,8 @@
     tree file
     htop
     neofetch
+    sqlite
+    ranger
 
     # hyprland
     wayland xwayland

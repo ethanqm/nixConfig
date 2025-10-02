@@ -9,11 +9,22 @@ let
     mouse = "a";
   };
   extraSettings = ''
-    set syntax=true
+    " system copy/paste
     set clipboard+=unnamedplus
+    " themed syntax highlighting
+    set syntax=on
+    " highlight searches
+    set hlsearch
+    " disable linewrap 
     set nowrap
+    " keep folder clean
     set noswapfile
+    " window split preference
     set splitbelow splitright
+    " disable auto comment next line
+    autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+    " autocomplete settings
+    set wildmode=longest,list,full
   '';
   binds = ''
     "BINDS
@@ -91,7 +102,7 @@ let
     augroup END
 
     " bind open/close toggle
-    nnoremap <leader>a :Lexplore<cr>
+    nnoremap <silent> <leader>a :Lexplore<cr>
   '';
 in
 {
