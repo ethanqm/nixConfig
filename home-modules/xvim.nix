@@ -25,11 +25,22 @@ let
     autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
     " autocomplete settings
     set wildmode=longest,list,full
+    " display invisible characters
+    set listchars=tab:>-,space:·,nbsp:␣,trail:•,eol:$,precedes:«,extends:»
+    function! ToggleList() "see BINDS
+      if &list
+        setlocal nolist
+      else
+        setlocal list
+      endif
+    endfunction
   '';
   binds = ''
     "BINDS
     nnoremap <space> <Nop>
     let mapleader=" "
+    " toggle invisible characters
+    nnoremap <silent> <leader>s :call ToggleList()<cr>
   '';
   sanskritBinds = '' 
     "SANSKRIT BINDS
