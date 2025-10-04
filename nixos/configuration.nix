@@ -129,7 +129,7 @@
     htop
     neofetch
     sqlite
-    ranger
+    lf #file tui
 
     # hyprland
     wayland xwayland
