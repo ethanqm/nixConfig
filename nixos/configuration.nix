@@ -128,8 +128,9 @@
     tree file
     htop
     neofetch
-    sqlite
     lf #file tui
+    atool unzip unrar
+    sqlite
 
     # hyprland
     wayland xwayland
