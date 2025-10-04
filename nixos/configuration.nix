@@ -181,6 +181,7 @@
     mullvad-vpn
     qbittorrent
     discord
+    brave
 
     # gaming
     steam wine 
