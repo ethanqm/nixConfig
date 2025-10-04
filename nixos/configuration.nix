@@ -129,6 +129,7 @@
     htop
     neofetch
     lf #file tui
+    xdg-utils
     atool unzip unrar
     sqlite
 
