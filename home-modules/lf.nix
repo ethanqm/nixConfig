@@ -21,7 +21,7 @@
           application/x-bat) cat "$1";;
           application/x-gdscript) cat "$1";;
           application/x-executable) readelf -h "$1";;
-          application/vnd.debian.binary-package) dpkg-deb -I "$1";;
+          application/vnd.debian.binary-package) (dpkg-deb -I "$1" && dpkg-deb -c "$1");;
           application/zip) als "$1";;
           application/x-zstd-compressed-tar) als "$1";;
           application/vnd.comicbook*) als "$1";; # not working
