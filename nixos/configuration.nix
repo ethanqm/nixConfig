@@ -129,8 +129,9 @@
     htop
     neofetch
     lf #file tui
-    xdg-utils
-    atool unzip unrar
+    xdg-utils # mime-type tools
+    atool unzip unrar # archive tools
+    dpkg # deb file stuff
     sqlite
 
     # hyprland
