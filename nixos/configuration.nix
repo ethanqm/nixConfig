@@ -125,13 +125,19 @@
     wget
     git gh glab git-credential-oauth
 
-    tree file
     htop
     neofetch
+
+    tree
+    file
     lf #file tui
+    ranger # ${pkg.ranger}/share/doc/ranger/config/scope.sh is nice but broken in lf
     xdg-utils # mime-type tools
-    atool unzip unrar # archive tools
+    atool unzip unrar _7zz # archive tools
     dpkg # deb file stuff
+    exiftool mediainfo
+    transmission_4 # torrents
+    mu # email stuff
     sqlite
 
     # hyprland
@@ -144,6 +150,7 @@
     networkmanagerapplet
     dunst libnotify
     kitty
+    guake
     playerctl # kb media keys
     brightnessctl # screen brightness keys
 

@@ -17,6 +17,7 @@
         "mullvad-vpn"
         "discord --start-minimized"
         "kdeconnect-indicator"
+        "guake"
       ];
       # rice
       decoration = {
@@ -122,6 +123,8 @@
         # hyprshot
         "SUPER SHIFT, S, exec, hyprshot --region"
         ", PRINT, exec, hyprshot -m output"
+        # guake
+        "SHIFT, PAUSE, exec, guake-toggle"
       ];
       bindm = [
         "$mod, ALT_R, resizewindow"
