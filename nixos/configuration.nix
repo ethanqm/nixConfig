@@ -138,6 +138,7 @@
     exiftool mediainfo
     transmission_4 # torrents
     mu # email stuff
+    pax-utils # elf info
     sqlite
 
     # hyprland

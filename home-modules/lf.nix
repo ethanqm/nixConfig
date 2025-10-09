@@ -26,9 +26,10 @@
           application/x-powershell) cat "$1";;
           application/x-bat) cat "$1";;
           application/x-gdscript) cat "$1";;
-          application/x-executable) (readelf -h "$1" && ldd "$1");;
+          application/x-executable) (readelf -h "$1" && lddtree "$1") | sed "s/^    //";;
+          application/x-sharedlib) (readelf -h "$1" && lddtree "$1") | sed "s/^    //";;
           application/x-bittorrent) transmission-show "$1" | sed '/Privacy/,/FILES/{//!d;s/FILES//}';;
-          application/vnd.appimage) (readelf -h "$1" && ldd "$1");;
+          application/vnd.appimage) (readelf -h "$1" && lddtree "$1") | sed "s/^    //";;
           application/vnd.debian.binary-package) (dpkg-deb -I "$1" && dpkg-deb -c "$1");;
           application/x-ms-shortcut) (strings "$1" | grep "[A-Z]:");;
           application/vnd.android.package-archive) unzip -l "$1";; # could do better
