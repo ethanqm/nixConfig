@@ -140,6 +140,7 @@
     mu # email stuff
     pax-utils # elf info
     sqlite
+    sqlite-utils
 
     # hyprland
     wayland xwayland
