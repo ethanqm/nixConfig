@@ -139,8 +139,8 @@
     transmission_4 # torrents
     mu # email stuff
     pax-utils # elf info
-    sqlite
-    sqlite-utils
+    sqlite sqlite-utils
+    pandoc xlsx2csv poppler-utils # fancy doc tools
 
     # hyprland
     wayland xwayland
