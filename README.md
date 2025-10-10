@@ -1,0 +1,22 @@
+# NixOS
+
+## Wishlist:
+- [ ] 🍚
+- [ ] emoji picker 
+  - [ ] really sick ZWJ support
+- [ ] lf:
+  - [ ] cd to navigated directory
+  - [ ] images in Kitty
+  - [ ] video preview:
+    - [ ] dimensions, duration, codec
+    - [ ] audio and subtitle languages
+  - [ ] exe & dll analogue of readelf & ldd
+  - [ ] calendar .icd
+- [ ] DaVinci Resolve find my rx580 plox
+- [ ] port:
+  - [ ] nvim config
+  - [ ] .bashrc & profile
+  - [ ] kitty conf
+- [ ] options for different devices
+- [ ] XDG MIMEType default associations
+
