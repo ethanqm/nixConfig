@@ -128,6 +128,8 @@
     htop
     neofetch
 
+    bc
+
     tree
     file
     lf #file tui
@@ -140,6 +142,7 @@
     mu # email stuff
     pax-utils # elf info
     sqlite sqlite-utils
+    jq # json ql
     pandoc xlsx2csv poppler-utils # fancy doc tools
 
     # hyprland

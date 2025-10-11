@@ -11,6 +11,32 @@
 
       source = pkgs.writeShellScript "lfpreview.sh" ''
         #!/usr/bin/env bash
+
+        # Video info
+        videoprev() {
+          INF=$(mediainfo --Output=JSON "$1")
+
+          sec=$(echo $INF | jq -r '.media.track.[0].Duration')
+          duration=$(printf '  Duration: %02d:%02d:%02.f\n' $(echo -e "$sec/3600\n$sec%3600/60\n$sec%60" | bc))
+
+          vid="$(echo "$INF" | jq '.media.track.[1] | {
+            Resolution: "\(.Width)x\(.Height)", 
+            FPS: .FrameRate, 
+            "Colour Depth": .BitDepth, 
+            Encode: .Encoded_Library
+            }
+          ')"
+
+          lang="$(echo $INF | jq -j -c '[.media.track.[] | {T: ."@type", Language}] | .[2:] |
+             reduce .[] as {$T, $Language} ({audio: [], subs: []}; 
+               if ($T == "Audio") then .audio += [$Language]
+                 elif ($T == "Text") then .subs += [$Language] end)' |
+                  sed "s/null/UNK/g")"
+
+          echo "$((echo "$vid" && echo "$duration" && echo "$lang") |
+            sed "s/subs/\nsubs/" | sed "s/,$//" |
+            sed "s/[{}[]]*//g" | sed 's/"//g' )"
+        }
         
         # Database preview func
         # courtesy ranger/scope.sh GPL3
@@ -107,7 +133,7 @@
         case "$(xdg-mime query filetype "$1")" in
           text/*) cat "$1";;
           image/*) exiftool "$1";;
-          video/*) echo "$1";;
+          video/*) videoprev "$1";;
           application/json) cat "$1";;
           application/toml) cat "$1";;
           application/yaml) cat "$1";;

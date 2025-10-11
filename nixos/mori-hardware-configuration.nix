@@ -17,7 +17,9 @@
   # amd rx580
   services.xserver.enable = true;
   services.xserver.videoDrivers = [ "amdgpu" ];
-  hardware.graphics.extraPackages = with pkgs; [ rocmPackages.clr.icd ];
+  hardware.graphics.extraPackages = with pkgs; [ 
+    rocmPackages.clr.icd
+  ];
   environment.systemPackages = with pkgs; [ clinfo ];
   environment.variables = { ROC_ENABLE_PRE_VEGA = "1"; };
 
