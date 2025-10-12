@@ -2,6 +2,13 @@
 {
   programs.lf = {
     enable = true;
+    extraConfig = ''
+      # EXTRA
+
+      # show MIMEType info
+      ## wait for #2186 ruler file to be merged
+      map m %xdg-mime query filetype $f
+    '';
     previewer = {
       keybinding = "i";
       #source = pkgs.writeShellScript "lfpreview.sh" ''
