@@ -40,7 +40,11 @@
                  elif ($T == "Text") then .subs += [$Language] end)' |
                   sed "s/null/UNK/g" | sed "s/],\?//g" )"
 
-          echo "$((echo "$vid" && echo "$duration" && echo "$lang") |
+          chap="$(echo "Chapters:"; echo $INF | jq 'if .media.track.[-1]."@type" == "Menu" then
+            .media.track.[-1].extra.[] else "" end'
+          )"
+
+          echo "$((echo "$vid" && echo "$duration" && echo "$lang" && echo "$chap") |
             sed "s/subs/\nsubs/" | 
             sed "s/[{}[]]*//g" | sed 's/"//g' )"
         }
