@@ -38,10 +38,10 @@
              reduce .[] as {$T, $Language} ({audio: [], subs: []}; 
                if ($T == "Audio") then .audio += [$Language]
                  elif ($T == "Text") then .subs += [$Language] end)' |
-                  sed "s/null/UNK/g")"
+                  sed "s/null/UNK/g" | sed "s/],//g" )"
 
           echo "$((echo "$vid" && echo "$duration" && echo "$lang") |
-            sed "s/subs/\nsubs/" | sed "s/,$//" |
+            sed "s/subs/\nsubs/" | 
             sed "s/[{}[]]*//g" | sed 's/"//g' )"
         }
         

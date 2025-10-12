@@ -7,9 +7,9 @@
 - [ ] lf:
   - [ ] cd to navigated directory
   - [ ] images in Kitty
-  - [ ] video preview:
-    - [ ] dimensions, duration, codec
-    - [ ] audio and subtitle languages
+  - [x] video preview:
+    - [x] dimensions, duration, codec
+    - [x] audio and subtitle languages
   - [ ] exe & dll analogue of readelf & ldd
   - [ ] calendar .icd
 - [ ] DaVinci Resolve find my rx580 plox
