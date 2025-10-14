@@ -7,7 +7,7 @@
 - [ ] lf:
   - [ ] cd to navigated directory
   - [ ] images in Kitty
-  - [o] video preview:
+  - [x] video preview:
     - [x] dimensions, duration, codec
     - [x] audio and subtitle languages
     - [x] chapter titles

@@ -24,7 +24,8 @@
           INF=$(mediainfo --Output=JSON "$1")
 
           sec=$(echo $INF | jq -r '.media.track.[0].Duration')
-          duration=$(printf '  Duration: %02d:%02d:%02.f\n' $(echo -e "$sec/3600\n$sec%3600/60\n$sec%60" | bc))
+          duration=$(printf '  Duration: %02d:%02d:%02.f\n' $(echo -e "$sec/3600\n$sec%3600/60\n$sec%60" | bc)|
+            sed 's/^  //')
 
           vid="$(echo "$INF" | jq '.media.track.[1] | {
             Resolution: "\(.Width)x\(.Height)", 
@@ -32,21 +33,21 @@
             "Colour Depth": .BitDepth, 
             Encode: .Encoded_Library
             }
-          ')"
+          ' | sed 's/^  //' | sed 's/,$//' )"
 
           lang="$(echo $INF | jq -j -c '[.media.track.[] | {T: ."@type", Language}] | .[2:] |
-             reduce .[] as {$T, $Language} ({audio: [], subs: []}; 
-               if ($T == "Audio") then .audio += [$Language]
-                 elif ($T == "Text") then .subs += [$Language] end)' |
-                  sed "s/null/UNK/g" | sed "s/],\?//g" )"
+             reduce .[] as {$T, $Language} ({Audio: [], Subs: []}; 
+               if ($T == "Audio") then .Audio += [$Language]
+                 elif ($T == "Text") then .Subs += [$Language] end)' |
+                  sed "s/null/Unknown/g" | sed 's/[//g' | sed "s/],\?//g" | sed 's/:/: /g' )"
 
           chap="$(echo "Chapters:"; echo $INF | jq 'if .media.track.[-1]."@type" == "Menu" then
             .media.track.[-1].extra.[] else "" end'
           )"
 
           echo "$((echo "$vid" && echo "$duration" && echo "$lang" && echo "$chap") |
-            sed "s/subs/\nsubs/" | 
-            sed "s/[{}[]]*//g" | sed 's/"//g' )"
+            sed "s/Subs/\nSubs/" | 
+            sed "s/[{}]*//g" | sed 's/"//g' )"
         }
         
         # Database preview func
