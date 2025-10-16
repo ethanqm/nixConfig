@@ -16,9 +16,7 @@
       #  ${pkgs.ranger}/share/doc/ranger/config/scope.sh "''${1}""''${2}""''${3}" "" "" || true
       #''; ## currently broken sad
 
-      source = pkgs.writeShellScript "lfpreview.sh" ''
-        #!/usr/bin/env bash
-
+      source = pkgs.writeShellScript "preview" ''
         # Video info
         videoprev() {
           INF=$(mediainfo --Output=JSON "$1")

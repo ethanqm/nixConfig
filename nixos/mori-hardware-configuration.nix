@@ -19,6 +19,7 @@
   services.xserver.videoDrivers = [ "amdgpu" ];
   hardware.graphics.extraPackages = with pkgs; [ 
     rocmPackages.clr.icd
+    libva-utils
   ];
   environment.systemPackages = with pkgs; [ clinfo ];
   environment.variables = { ROC_ENABLE_PRE_VEGA = "1"; };

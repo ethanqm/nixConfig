@@ -202,7 +202,7 @@
     steam wine 
     itch
     lutris
-    radeontop
+    radeontop vulkan-tools
     obs-studio
     protonup
 
