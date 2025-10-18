@@ -137,13 +137,14 @@
     xdg-utils # mime-type tools
     atool unzip unrar _7zz # archive tools
     dpkg # deb file stuff
-    exiftool mediainfo
+    exiftool mediainfo mkvtoolnix mkvtoolnix-cli
     transmission_4 # torrents
     mu # email stuff
     pax-utils # elf info
     sqlite sqlite-utils
     jq # json ql
     pandoc xlsx2csv poppler-utils # fancy doc tools
+    imhex heh # hex editors
 
     # hyprland
     wayland xwayland
