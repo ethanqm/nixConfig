@@ -142,7 +142,7 @@
     mu # email stuff
     pax-utils # elf info
     sqlite sqlite-utils
-    jq # json ql
+    jq fastgron # json tools
     pandoc xlsx2csv poppler-utils # fancy doc tools
     imhex heh # hex editors
 
