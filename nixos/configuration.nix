@@ -90,7 +90,12 @@
   users.users.user = {
     isNormalUser = true;
     description = "user";
-    extraGroups = [ "networkmanager" "wheel" "boinc" ];
+    extraGroups = [ 
+      "networkmanager" 
+      "wheel"
+      "boinc"
+      "i2c" # brightness control
+    ];
     packages = with pkgs; [
  
     ];
@@ -159,6 +164,7 @@
     guake
     playerctl # kb media keys
     brightnessctl # screen brightness keys
+    ddcutil
 
     # file explorer
     kdePackages.dolphin
@@ -283,6 +289,9 @@
    services.boinc = {
      enable = true;
    };
+
+  # XDG stuff
+  environment.sessionVariables.XDG_DESKTOP_PORTAL_DIR="/run/current-system/sw/share/xdg-desktop-portal/portals";
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];

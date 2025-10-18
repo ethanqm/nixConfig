@@ -6,6 +6,7 @@
     ./home-modules/hyprland.nix
     ./home-modules/waybar.nix
     ./home-modules/lf.nix
+    ./home-modules/xdg.nix
   ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.

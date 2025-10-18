@@ -1,4 +1,8 @@
 { config, pkgs, ... }:
+let 
+  incBrightness = x: "ddcutil -d 1 setvcp 10 + ${x} && ddcutil -d 2 setvcp 10 + ${x}";
+  decBrightness = x: "ddcutil -d 1 setvcp 10 - ${x} && ddcutil -d 2 setvcp 10 - ${x}"; 
+in
 {
   gtk = {
     #enable = true;
@@ -116,6 +120,9 @@
         # screen rotation script # numlock insensitive :(
         "SUPER ALT, KP_END, exec, sh /home/user/scripts/screen_rotate/hypr_rotationToggle.sh left"
         "SUPER ALT, KP_DOWN, exec, sh /home/user/scripts/screen_rotate/hypr_rotationToggle.sh right"
+        # brightness
+        ''$mod, equal, exec, ${incBrightness "5"}''
+        ''$mod, minus, exec, ${decBrightness "5"}''
         # clear errors
         "SUPER, ESCAPE, exec, hyprctl seterror disable"
         # hyprshader crt

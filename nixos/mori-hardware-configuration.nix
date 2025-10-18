@@ -11,8 +11,17 @@
   boot.kernelPackages = pkgs.linuxPackages_6_16; #kernel sept 2025
   boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "usb_storage" "usbhid" "sd_mod" ];
   boot.initrd.kernelModules = [ "amdgpu" ]; # rx580
-  boot.kernelModules = [ "kvm-amd" ];
+  boot.kernelModules = [ 
+    "kvm-amd"
+    "i2c-dev" # brightness control
+  ];
   boot.extraModulePackages = [ ];
+
+  # brightness control
+  services.udev.extraRules = ''
+    KERNEL=="i2c-[0-9]*", GROUP="i2c", MODE="0660"
+  '';
+  hardware.i2c.enable = true;
 
   # amd rx580
   services.xserver.enable = true;
