@@ -13,8 +13,8 @@ let
     set clipboard+=unnamedplus
     " themed syntax highlighting
     set syntax=on
-    " highlight searches
-    set hlsearch
+    " don't highlight searches
+    set nohlsearch
     " disable linewrap 
     set nowrap
     " keep folder clean
