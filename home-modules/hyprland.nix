@@ -5,7 +5,7 @@ let
 in
 {
   gtk = {
-    #enable = true;
+    enable = true;
   };
 
   #HYPRLAND

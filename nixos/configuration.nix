@@ -171,6 +171,7 @@
     xfce.thunar
     ## image viewer
     kdePackages.gwenview libwebp libheif
+    
 
     # media
     vlc mpv ffmpeg
@@ -292,6 +293,7 @@
 
   # XDG stuff
   environment.sessionVariables.XDG_DESKTOP_PORTAL_DIR="/run/current-system/sw/share/xdg-desktop-portal/portals";
+  environment.sessionVariables.GTK_USE_PORTAL=1;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
