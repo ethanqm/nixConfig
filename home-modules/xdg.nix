@@ -4,8 +4,9 @@
     enable = true;
     portal = {
       enable = true;
+      xdgOpenUsePortal=true;
       extraPortals = with pkgs; [
-        #xdg-desktop-portal-hyprland
+        xdg-desktop-portal-hyprland
         kdePackages.xdg-desktop-portal-kde
       ];
       config = {
@@ -19,6 +20,10 @@
     mime.enable = true;
     mimeApps = {
       enable = true;
+      defaultApplications = {
+        "x-scheme-handler/https" = ["firefox.desktop"];
+        "x-scheme-handler/http" = ["firefox.desktop"];
+      };
     };
     userDirs.createDirectories = true;
   };
