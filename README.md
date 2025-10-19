@@ -20,6 +20,6 @@
   - [ ] kitty conf
 - [ ] options for different devices
 - [o] XDG MIMEType default associations
-  - [ ] term vim for text/*
+  - [x]* term vim for text/*
   - [ ] a b o l i s h gtk file picker
 

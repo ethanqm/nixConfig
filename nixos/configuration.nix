@@ -140,6 +140,8 @@
     lf #file tui
     ranger # ${pkg.ranger}/share/doc/ranger/config/scope.sh is nice but broken in lf
     xdg-utils # mime-type tools
+    xdg-desktop-portal
+    kdePackages.xdg-desktop-portal-kde
     atool unzip unrar _7zz # archive tools
     dpkg # deb file stuff
     exiftool mediainfo mkvtoolnix mkvtoolnix-cli
