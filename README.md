@@ -19,5 +19,7 @@
   - [ ] .bashrc & profile
   - [ ] kitty conf
 - [ ] options for different devices
-- [ ] XDG MIMEType default associations
+- [o] XDG MIMEType default associations
+  - [ ] term vim for text/*
+  - [ ] a b o l i s h gtk file picker
 

@@ -100,15 +100,15 @@ in
 {
   xdg = { 
     enable = true;
-    portal = { 
+    portal = {
       enable = true;
-      xdgOpenUsePortal=true; 
+      xdgOpenUsePortal=true;
       extraPortals = with pkgs; [
-        xdg-desktop-portal-hyprland 
+        xdg-desktop-portal-hyprland
         kdePackages.xdg-desktop-portal-kde
-      ]; 
+      ];
     config = {
-      common = { 
+      common = {
         default = [ "hyprland" "kde" ];
           "org.freedesktop.impl.portal.FileChooser" = ["kde"];
           #"org.freedesktop.portal.FileChooser" = ["dolphin"];
@@ -121,12 +121,13 @@ in
       # override with associations.{added,removed}
       defaultApplications = {
         # URIs
-        "x-scheme-handler/https" = ["firefox.desktop"];
-        "x-scheme-handler/http" = ["firefox.desktop"];
-      } 
+        "x-scheme-handler/https" = [ "firefox.desktop" ];
+        "x-scheme-handler/http" = [ "firefox.desktop" ];
+      }
       // groupAssign mime.video [ "mpv.desktop" "vlc.desktop" ]
       // groupAssign mime.audio [ "mpv.desktop" "vlc.desktop" ]
-      // groupAssign mime.image [ "org.kde.gwenview.desktop" ];
+      // groupAssign mime.image [ "org.kde.gwenview.desktop" ]
+      ;
     };
     userDirs.createDirectories = true;
   };
