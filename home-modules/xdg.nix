@@ -1,8 +1,8 @@
 { config, pkgs, lib, ...}:
 let
   groupAssign = (types: apps: 
-  builtins.foldl' (acc: mimetype: {"${mimetype}" = apps;} // acc)
-    {} types);
+    builtins.foldl' (acc: mimetype: {"${mimetype}" = apps;} // acc)
+      {} types);
   mime = {
     video = [
       "video/3gpp" "video/3gpp2"
@@ -96,14 +96,21 @@ let
       "audio/x-pn-realaudio-plugin" 
     ];
   };
-in {
-    xdg =  { enable = true;
-      portal = { enable = true;
-        xdgOpenUsePortal=true; extraPortals = with pkgs; [
-          xdg-desktop-portal-hyprland kdePackages.xdg-desktop-portal-kde
-        ]; config = {
-          common = { default = [ "hyprland" "kde" ];
-            "org.freedesktop.impl.portal.FileChooser" = ["kde"];
+in 
+{
+  xdg = { 
+    enable = true;
+    portal = { 
+      enable = true;
+      xdgOpenUsePortal=true; 
+      extraPortals = with pkgs; [
+        xdg-desktop-portal-hyprland 
+        kdePackages.xdg-desktop-portal-kde
+      ]; 
+    config = {
+      common = { 
+        default = [ "hyprland" "kde" ];
+          "org.freedesktop.impl.portal.FileChooser" = ["kde"];
           #"org.freedesktop.portal.FileChooser" = ["dolphin"];
         };
       };
@@ -111,6 +118,7 @@ in {
     mime.enable = true;
     mimeApps = {
       enable = true;
+      # override with associations.{added,removed}
       defaultApplications = {
         # URIs
         "x-scheme-handler/https" = ["firefox.desktop"];
