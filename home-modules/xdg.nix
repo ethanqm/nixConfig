@@ -158,10 +158,11 @@ in
         groupAssign mime.image [ "org.kde.gwenview.desktop" ] //
         groupAssign (mime.text ++ mime.scripts) [ "vim.desktop" ] //
       {
+        "application/x-bittorrent" = [ "qbittorrent.desktop" ];
         # URIs
         "x-scheme-handler/https" = [ "firefox.desktop" ];
         "x-scheme-handler/http" = [ "firefox.desktop" ];
-        "application/x-bittorrent" = [ "qbitorrent.desktop" ];
+        "x-scheme-handler/magnet" = [ "qbittorrent.desktop" ];
       };
     };
     userDirs.createDirectories = true;
