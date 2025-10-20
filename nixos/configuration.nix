@@ -205,7 +205,7 @@
     firefox 
     mullvad-vpn
     qbittorrent
-    #discord -> stable
+    discord
     brave
 
     # gaming
@@ -225,7 +225,7 @@
   ])
    ++
    (with stable; [
-     discord
+     #discord
    ]);
   nix.extraOptions = ''
      keep-outputs = true
