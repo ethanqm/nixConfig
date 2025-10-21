@@ -179,6 +179,7 @@
           application/pdf) pdftotext -l 10 -nopgbrk -q -- "$1" - | fmt -w "35";;
           application/vnd.oasis.spreadsheetml.sheet) xlsx2csv -- "$1";;
           application/vnd.openxmlformats-officedocument.wordprocessingml.document) pandoc -s -t markdown -- "$1";;
+          application/x-subrip) cat "$1";; #.srt
           message/rfc822) mu view -- "$1";; # email files
           *) (echo "UNHANDLED" && xdg-mime query filetype "$1");;
         esac
