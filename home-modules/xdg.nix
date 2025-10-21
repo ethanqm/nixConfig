@@ -157,13 +157,14 @@ in
         groupAssign mime.audio [ "mpv.desktop" "vlc.desktop" ] //
         groupAssign mime.image [ "org.kde.gwenview.desktop" ] //
         groupAssign (mime.text ++ mime.scripts) [ "vim.desktop" ] //
-      {
-        "application/x-bittorrent" = [ "qbittorrent.desktop" ];
-        # URIs
-        "x-scheme-handler/https" = [ "firefox.desktop" ];
-        "x-scheme-handler/http" = [ "firefox.desktop" ];
-        "x-scheme-handler/magnet" = [ "qbittorrent.desktop" ];
-      };
+        {
+          "application/x-bittorrent" = [ "com.qbittorrent.Bittorrent.desktop" ];
+          # URIs
+          "x-scheme-handler/https" = [ "firefox.desktop" ];
+          "x-scheme-handler/http" = [ "firefox.desktop" ];
+          "x-scheme-handler/magnet" = [ "com.qbittorrent.Bittorrent.desktop" ];
+        }
+      ;
     };
     userDirs.createDirectories = true;
     desktopEntries.vim = {
