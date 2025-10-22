@@ -19,3 +19,5 @@ collect ~/.config/hypr/hyprland.conf "hyprland.conf"
 collect ~/.config/waybar/config "waybar/config"
 collect ~/.config/waybar/style.css "waybar/style.css"
 
+# tmux
+collect ~/.config/tmux/tmux.conf "tmux.conf"
