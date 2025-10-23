@@ -112,7 +112,7 @@
   # Install firefox.
   programs.firefox = {
     enable = true;
-    # look more into this bc default won't
+    # look more into this bc gtk file picker won't
     # allow typing file path
     # https://nixos.wiki/wiki/Firefox
     #preferences = {
@@ -152,7 +152,7 @@
     sqlite sqlite-utils
     jq fastgron # json tools
     pandoc xlsx2csv poppler-utils # fancy doc tools
-    imhex heh # hex editors
+    heh # hex editor
 
     # hyprland
     wayland xwayland
@@ -199,7 +199,7 @@
     nodejs_24 bun
     zig zls
     gdb lldb
-    ghidra-bin
+    ghidra-bin imhex 
     nixd # lsp
 
     # web
@@ -224,10 +224,11 @@
     microsoft-edge
     zoom-us
   ])
-   ++
-   (with stable; [
-     #discord
-   ]);
+  ++
+  (with stable; [
+    #discord
+  ]);
+
   nix.extraOptions = ''
      keep-outputs = true
      keep-derivations = true

@@ -3,7 +3,16 @@
     enable = true;
     settings = {
       main = {
-        modules-right = [ "pulseaudio" "clock" "nm-applet" "tray" "custom/power" ];
+        modules-right = [ 
+          "cpu"
+          "memory"
+          "pulseaudio"
+          "nm-applet"
+          "network"
+          "tray"
+          "clock"
+          "custom/power"
+        ];
         height = 30;
         spacing = 4;
         tray = {
@@ -27,6 +36,22 @@
             default = ["" "" ""];
           };
           on-click = "pavucontrol";
+        };
+
+        cpu = {
+          interval = 1;
+          format = "{icon0} {icon1} {icon2} {icon3} {icon4} {icon5} {icon6} {icon7} {icon8} {icon9} {icon10} {icon11}";
+          format-icons = ["▁" "▂" "▃" "▄" "▅" "▆" "▇" "█"];
+        };
+
+        memory = {
+          interval = 30;
+          format = "{used:0.1f}G/{total:0.1f}G ";
+        };
+
+        network = {
+          interval = 1;
+          format = "{frequency}GHz {bandwidthDownBytes:>}↓ {bandwidthUpBytes:>}↑";
         };
 
         "custom/power" = {
@@ -235,6 +260,7 @@
       }
 
 #network {
+      font-family: monospace;
       background-color: #2980b9;
       }
 
