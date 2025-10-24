@@ -128,7 +128,7 @@ in
         # hyprshader crt
         "SUPER ALT, S, exec, hyprshade toggle retro"
         # hyprshot
-        "SUPER SHIFT, S, exec, hyprshot --region"
+        "CONTROL, PRINT, exec, hyprshot -m region"
         ", PRINT, exec, hyprshot -m output"
         # guake
         "SHIFT, PAUSE, exec, guake-toggle"
