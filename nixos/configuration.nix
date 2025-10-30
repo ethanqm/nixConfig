@@ -22,6 +22,12 @@
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
+  # Open ports in the firewall.
+  # networking.firewall.allowedTCPPorts = [ ... ];
+  # networking.firewall.allowedUDPPorts = [ ... ];
+  # Or disable the firewall altogether.
+  # networking.firewall.enable = false;
+
   # Enable networking
   networking.networkmanager.enable = true;
   networking.networkmanager.dns = "none";
@@ -131,7 +137,7 @@
     wget
     git gh glab git-credential-oauth
 
-    htop
+    htop btop
     neofetch
 
     bc
@@ -303,11 +309,6 @@
   environment.sessionVariables.XDG_DESKTOP_PORTAL_DIR="/run/current-system/sw/share/xdg-desktop-portal/portals";
   environment.sessionVariables.GTK_USE_PORTAL=1;
 
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
