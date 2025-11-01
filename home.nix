@@ -93,6 +93,8 @@
     userEmail = "102937457+ethanqm@users.noreply.github.com";
     extraConfig = {
       init.defaultBranch = "main";
+      diff.tool = "vimdiff";
+      difftool.prompt = false;
     };
   };
 
