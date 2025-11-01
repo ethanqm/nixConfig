@@ -8,6 +8,7 @@
     ./home-modules/lf.nix
     ./home-modules/xdg.nix
     ./home-modules/tmux.nix
+    ./home-modules/git.nix
   ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -86,23 +87,6 @@
   #
 
   fonts.fontconfig.enable = true;
-
-  programs.git = {
-    enable = true;
-    userName = "ethanqm";
-    userEmail = "102937457+ethanqm@users.noreply.github.com";
-    extraConfig = {
-      init.defaultBranch = "main";
-
-      credential = {
-        helper = [ "cache --timeout 21600"  "oauth" ];
-      };
-
-      diff.tool = "vimdiff";
-      difftool.prompt = false;
-    };
-  };
-
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
