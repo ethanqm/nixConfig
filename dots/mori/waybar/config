@@ -1,5 +1,19 @@
 [
   {
+    "cpu": {
+      "format": "{icon0} {icon1} {icon2} {icon3} {icon4} {icon5} {icon6} {icon7} {icon8} {icon9} {icon10} {icon11}",
+      "format-icons": [
+        "▁",
+        "▂",
+        "▃",
+        "▄",
+        "▅",
+        "▆",
+        "▇",
+        "█"
+      ],
+      "interval": 1
+    },
     "custom/power": {
       "format": "⏻ ",
       "menu": "on-click",
@@ -13,13 +27,24 @@
       "tooltip": false
     },
     "height": 30,
+    "memory": {
+      "format": "{used:0.1f}G/{total:0.1f}G ",
+      "interval": 30
+    },
     "modules-right": [
+      "cpu",
+      "memory",
       "pulseaudio",
-      "clock",
       "nm-applet",
+      "network",
       "tray",
+      "clock",
       "custom/power"
     ],
+    "network": {
+      "format": "{frequency}GHz {bandwidthDownBytes:>}↓ {bandwidthUpBytes:>}↑",
+      "interval": 1
+    },
     "pulseaudio": {
       "format": "{volume}% {icon}  {format_source}",
       "format-bluetooth": "{volume}% {icon} {format_source}",

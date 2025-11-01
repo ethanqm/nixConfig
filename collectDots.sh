@@ -21,3 +21,6 @@ collect ~/.config/waybar/style.css "waybar/style.css"
 
 # tmux
 collect ~/.config/tmux/tmux.conf "tmux.conf"
+
+# git config
+collect ~/.config/git/config ".gitconfig"

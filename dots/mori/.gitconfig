@@ -1,0 +1,22 @@
+[credential]
+	helper = "cache --timeout 21600"
+	helper = "oauth"
+
+[diff]
+	tool = "vimdiff"
+
+[difftool]
+	prompt = false
+
+[gpg]
+	format = "openpgp"
+
+[gpg "openpgp"]
+	program = "/nix/store/sws8hkfjlnmmbnr9r1lla2vr0da9dip3-gnupg-2.4.8/bin/gpg"
+
+[init]
+	defaultBranch = "main"
+
+[user]
+	email = "102937457+ethanqm@users.noreply.github.com"
+	name = "ethanqm"
