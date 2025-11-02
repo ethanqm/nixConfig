@@ -6,7 +6,7 @@
   - [ ] really sick ZWJ support
 - [ ] lf:
   - [ ] cd to navigated directory
-  - [ ] images in Kitty
+  - [x] images in Kitty
   - [x] video preview:
     - [x] dimensions, duration, codec
     - [x] audio and subtitle languages

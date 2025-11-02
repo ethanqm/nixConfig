@@ -140,9 +140,19 @@
           fi
         }
 
+        w=$2
+        h=$3
+        x=$4
+        y=$5
+        # kitty image
+        kitty-image() {
+          ${pkgs.kitty}/bin/kitty +kitten icat --silent --stdin no --transfer-mode file --place "''${w}x''${h}@''${x}x''${y}" "$1" < /dev/null > /dev/tty
+          exit 1
+        }
+
         case "$(xdg-mime query filetype "$1")" in
           text/*) cat "$1";;
-          image/*) exiftool "$1";;
+          image/*) kitty-image "$1";;
           video/*) videoprev "$1";;
           application/json) cat "$1";;
           application/toml) cat "$1";;
