@@ -39,8 +39,8 @@ let
     set listchars=tab:>-,space:·,nbsp:␣,trail:•,eol:$,precedes:«,extends:»
 
     " transparent background
-    highlight Normal guibg=none
-    highlight NonText  guibg=none
+    highlight Normal guibg=NONE
+    highlight NonText  guibg=NONE
     highlight Normal ctermbg=none
     highlight NonText ctermbg=none
   '';
