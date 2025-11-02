@@ -37,6 +37,12 @@ let
     set wildmode=longest,list,full
     " display invisible characters | see BINDS
     set listchars=tab:>-,space:·,nbsp:␣,trail:•,eol:$,precedes:«,extends:»
+
+    " transparent background
+    highlight Normal guibg=none
+    highlight NonText  guibg=none
+    highlight Normal ctermbg=none
+    highlight NonText ctermbg=none
   '';
   binds = ''
     "BINDS
@@ -73,7 +79,7 @@ let
     nnoremap <silent> <C-up> :resize -3<CR>
     nnoremap <silent> <C-down> :resize +3<CR>
   '';
-  lsp = ''
+  vimLSP = ''
     "LSP
     let g:lsp_diagnostics_enabled = 0
     let g:lsp_use_native_client = 1
@@ -123,13 +129,76 @@ in
   programs.vim = {
     enable = true;
     extraConfig = 
-      extraSettings 
+      extraSettings
       + binds
       + sanskritBinds
       + windowBinds
-      + lsp
+      + vimLSP
       + filetree
     ;
     plugins = with pkgs.vimPlugins; [ vim-lsp vim-lsp-settings ];
+  };
+  programs.neovim = {
+    enable = true;
+    extraConfig = 
+    extraSettings
+    + binds
+    + sanskritBinds
+    + windowBinds
+    + filetree
+    ;
+    plugins = with pkgs.vimPlugins; [
+      nvim-lspconfig
+
+      nvim-treesitter
+      nvim-treesitter-parsers.asm
+      nvim-treesitter-parsers.bash
+      nvim-treesitter-parsers.cmake
+      nvim-treesitter-parsers.commonlisp
+      nvim-treesitter-parsers.cpp
+      nvim-treesitter-parsers.css
+      nvim-treesitter-parsers.csv
+      nvim-treesitter-parsers.desktop
+      nvim-treesitter-parsers.diff
+      nvim-treesitter-parsers.gdscript
+      nvim-treesitter-parsers.gdshader
+      nvim-treesitter-parsers.git_config
+      nvim-treesitter-parsers.git_rebase
+      nvim-treesitter-parsers.gitcommit
+      nvim-treesitter-parsers.gitignore
+      nvim-treesitter-parsers.glsl
+      nvim-treesitter-parsers.go
+      nvim-treesitter-parsers.hlsl
+      nvim-treesitter-parsers.html
+      nvim-treesitter-parsers.hyprlang
+      nvim-treesitter-parsers.java
+      nvim-treesitter-parsers.javascript
+      nvim-treesitter-parsers.jq
+      nvim-treesitter-parsers.json
+      nvim-treesitter-parsers.kitty
+      nvim-treesitter-parsers.kotlin
+      nvim-treesitter-parsers.lua
+      nvim-treesitter-parsers.markdown
+      nvim-treesitter-parsers.nasm
+      nvim-treesitter-parsers.nix
+      nvim-treesitter-parsers.odin
+      nvim-treesitter-parsers.passwd
+      nvim-treesitter-parsers.powershell
+      nvim-treesitter-parsers.printf
+      nvim-treesitter-parsers.prolog
+      nvim-treesitter-parsers.python
+      nvim-treesitter-parsers.rust
+      nvim-treesitter-parsers.scheme
+      nvim-treesitter-parsers.sql
+      nvim-treesitter-parsers.tmux
+      nvim-treesitter-parsers.toml
+      nvim-treesitter-parsers.typescript
+      nvim-treesitter-parsers.vim
+      nvim-treesitter-parsers.wgsl
+      nvim-treesitter-parsers.wgsl_bevy
+      nvim-treesitter-parsers.xml
+      nvim-treesitter-parsers.yaml
+      nvim-treesitter-parsers.zig
+    ];
   };
 }
