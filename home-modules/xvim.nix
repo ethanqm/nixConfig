@@ -1,14 +1,24 @@
 { config, pkgs, ... }:
 let
-  commonSettings = {
-    tabstop = 2;
-    shiftwidth = 2;
-    number = true;
-    relativenumber = true;
-    ignorecase = true;
-    mouse = "a";
-  };
   extraSettings = ''
+    " case sensitive searches if capital present
+    set ignorecase
+    " mouse on
+    set mouse=a
+    " current line number
+    set number
+    " line distance
+    set relativenumber
+
+    " spaces instead of tab
+    set expandtab
+    " indent size
+    set shiftwidth=2
+    " backspace indent size
+    set softtabstop=2
+    " tab char size
+    set tabstop=2
+
     " system copy/paste
     set clipboard+=unnamedplus
     " themed syntax highlighting
@@ -112,7 +122,6 @@ in
 {
   programs.vim = {
     enable = true;
-    settings = commonSettings;
     extraConfig = 
       extraSettings 
       + binds
