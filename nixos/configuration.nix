@@ -202,7 +202,7 @@
 
     # dev
     python314
-    nodejs_24 bun
+    nodejs_24 bun typescript typescript-language-server
     zig zls
     gdb lldb
     ghidra-bin imhex 
@@ -233,6 +233,7 @@
   ++
   (with stable; [
     #discord
+    godot
   ]);
 
   nix.extraOptions = ''

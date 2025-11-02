@@ -79,24 +79,6 @@ let
     nnoremap <silent> <C-up> :resize -3<CR>
     nnoremap <silent> <C-down> :resize +3<CR>
   '';
-  vimLSP = ''
-    "LSP
-    let g:lsp_diagnostics_enabled = 0
-    let g:lsp_use_native_client = 1
-
-    function! s:on_lsp_buffer_enabled() abort
-      setlocal omnifunc=lsp#complete
-      nmap <buffer> gd <plug>(lsp-definition)
-      nmap <buffer> gr <plug>(lsp-references)
-      nmap <buffer> K <plug>(lsp-hover)
-    endfunction
-
-    augroup lsp_install
-      au!
-      " call s:on_lsp_buffer_enabled only for languages that has the server registered.
-      autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
-    augroup END
-  '';
   filetree = ''
     "FILE TREE
     "" thanks: 
@@ -124,6 +106,30 @@ let
     " bind open/close toggle
     nnoremap <silent> <leader>a :Lexplore<cr>
   '';
+  vimLSP = ''
+    "LSP
+    let g:lsp_diagnostics_enabled = 0
+    let g:lsp_use_native_client = 1
+
+    function! s:on_lsp_buffer_enabled() abort
+      setlocal omnifunc=lsp#complete
+      nmap <buffer> gd <plug>(lsp-definition)
+      nmap <buffer> gr <plug>(lsp-references)
+      nmap <buffer> K <plug>(lsp-hover)
+    endfunction
+
+    augroup lsp_install
+      au!
+      " call s:on_lsp_buffer_enabled only for languages that has the server registered.
+      autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
+    augroup END
+  '';
+  nvimLSP = '' --LUA!
+    vim.lsp.enable('gdscript')  -- godot
+    vim.lsp.enable('nixd')      -- nix
+    vim.lsp.enable('ts_ls')     -- typescript
+    vim.lsp.enable('zls')       -- zig
+  '';
 in
 {
   programs.vim = {
@@ -146,6 +152,9 @@ in
     + sanskritBinds
     + windowBinds
     + filetree
+    ;
+    extraLuaConfig =
+      nvimLSP
     ;
     plugins = with pkgs.vimPlugins; [
       nvim-lspconfig
