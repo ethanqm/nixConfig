@@ -241,7 +241,7 @@
      keep-derivations = true
   ''; # don't gc build components
   environment.sessionVariables = {
-    EDITOR = "vim";
+    EDITOR = "nvim";
     BROWSER = "firefox";
     FILE_BROWSER = "dolphin";
     MENU = "wofi --show drun";
