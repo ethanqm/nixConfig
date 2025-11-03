@@ -206,6 +206,8 @@ in
       cmp-path
       cmp-cmdline
 
+      firenvim
+
       nvim-treesitter
       nvim-treesitter-parsers.asm
       nvim-treesitter-parsers.bash
