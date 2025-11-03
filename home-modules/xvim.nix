@@ -172,11 +172,11 @@ in
     enable = true;
     extraConfig = 
       extraSettings
-      + binds
-      + sanskritBinds
-      + windowBinds
-      + vimLSP
-      + filetree
+    + binds
+    + sanskritBinds
+    + windowBinds
+    + vimLSP
+    + filetree
     ;
     plugins = with pkgs.vimPlugins; [ vim-lsp vim-lsp-settings ];
   };
@@ -186,7 +186,7 @@ in
     #vimAlias = true; # keep false
     vimdiffAlias = true;
     extraConfig = 
-    extraSettings
+      extraSettings
     + binds
     + sanskritBinds
     + windowBinds
@@ -195,7 +195,7 @@ in
     ;
     extraLuaConfig =
       nvimLSP
-      + nvimCmp
+    + nvimCmp
     ;
     plugins = with pkgs.vimPlugins; [
       nvim-lspconfig
