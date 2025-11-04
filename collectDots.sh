@@ -12,6 +12,12 @@ vimFile=($(cat ~/.nix-profile/bin/vim))
 vimrcLoc=$(echo ${vimFile[6]} | sed "s/'//g") 
 collect $vimrcLoc ".vimrc"
 
+# neovim init.lua & .vim file
+collect ~/.config/nvim/init.lua "neovim/init.lua"
+initLua=($(cat ~/.config/nvim/init.lua))
+vimLoc=$(echo ${initLua[2]} | sed "s/]//g")
+collect $vimLoc "neovim/init.vim"
+
 # hyprland hyprland.conf
 collect ~/.config/hypr/hyprland.conf "hyprland.conf"
 
