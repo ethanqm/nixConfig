@@ -36,8 +36,8 @@ in
         };
         blur = {
           enabled = true;
-          size = 6;
-          passes = 2;
+          size = 3;
+          passes = 3;
           vibrancy = 1.696;
         };
 
