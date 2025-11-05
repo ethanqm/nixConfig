@@ -159,6 +159,7 @@ in
         groupAssign (mime.text ++ mime.scripts) [ "vim.desktop" ] //
         {
           "application/x-bittorrent" = [ "com.qbittorrent.Bittorrent.desktop" ];
+          "application/pdf" = [ "org.kde.okular.desktop" ];
           # URIs
           "x-scheme-handler/https" = [ "firefox.desktop" ];
           "x-scheme-handler/http" = [ "firefox.desktop" ];

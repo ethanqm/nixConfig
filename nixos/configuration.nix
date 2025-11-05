@@ -180,6 +180,8 @@
     xfce.thunar
     ## image viewer
     kdePackages.gwenview libwebp libheif
+    ## pdf
+    kdePackages.okular
     
 
     # media
