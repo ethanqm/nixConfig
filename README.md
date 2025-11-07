@@ -15,7 +15,7 @@
   - [ ] calendar .icd
 - [ ] DaVinci Resolve find my rx580 plox
 - [ ] port:
-  - [ ] nvim config
+  - [x] nvim config
   - [ ] .bashrc & profile
   - [x] kitty conf
 - [ ] options for different devices
