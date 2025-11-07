@@ -30,3 +30,6 @@ collect ~/.config/tmux/tmux.conf "tmux.conf"
 
 # git config
 collect ~/.config/git/config ".gitconfig"
+
+# kitty
+collect ~/.config/kitty/kitty.conf "kitty.conf"

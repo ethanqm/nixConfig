@@ -9,6 +9,7 @@
     ./home-modules/xdg.nix
     ./home-modules/tmux.nix
     ./home-modules/git.nix
+    ./home-modules/kitty.nix
   ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
