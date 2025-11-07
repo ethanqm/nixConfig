@@ -17,7 +17,7 @@
 - [ ] port:
   - [ ] nvim config
   - [ ] .bashrc & profile
-  - [ ] kitty conf
+  - [x] kitty conf
 - [ ] options for different devices
 - [o] XDG MIMEType default associations
   - [x] * term vim for text/*
