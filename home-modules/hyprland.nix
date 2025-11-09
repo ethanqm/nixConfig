@@ -18,6 +18,7 @@ in
         "hyprpaper"
         "nm-applet --indicator"
         "dunst"
+        "udiskie"
         "mullvad-vpn"
         "discord --start-minimized"
         "kdeconnect-indicator"
