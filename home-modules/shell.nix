@@ -26,7 +26,6 @@ let
   ];
 in
 {
-  #environment.pathsToLink = [ "/share/bash-completion" ];
   programs.bash = {
     enable = true;
     enableCompletion = true;
@@ -35,15 +34,14 @@ in
     bashrcExtra = ''
     
       # prompt:
-      exstat() {
+      exitprompt() {
         if [[ $? == 0 ]]; then
-          echo -e '\e[1;35m>'
+PS1='\[\e[1;35m\]λ.\[\e[1;31m\]\u\[\e[1;33m\]@\[\e[1;32m\]\h \[\e[1;36m\]\W\[\e[1;35m\]>\$\[\e[0m\]'
         else
-          echo -e '\e[1;31m!'
+PS1='\[\e[1;35m\]λ.\[\e[1;31m\]\u\[\e[1;33m\]@\[\e[1;32m\]\h \[\e[1;36m\]\W\[\e[1;31m\]!$?\$\[\e[0m\]'
         fi
       }
-PS1='\[\e[1;35m\]λ.\[\e[1;31m\]\u\[\e[1;33m\]@\[\e[1;32m\]\h \[\e[1;36m\]\W$(exstat)\$\[\e[0m\]'
-
+PROMPT_COMMAND=exitprompt
       ex ()
       {
         if [ -f $1 ] ; then

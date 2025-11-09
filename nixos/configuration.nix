@@ -159,6 +159,7 @@
     pandoc xlsx2csv poppler-utils # fancy doc tools
     heh # hex editor
     fzf
+    sdcv # terminal dictionary # todo get dic't
 
     udiskie # auto-mount media
 
@@ -240,6 +241,7 @@
     godot
   ]);
 
+  environment.pathsToLink = [ "/share/bash-completion" ];
   environment.sessionVariables = {
     EDITOR = "nvim";
     BROWSER = "firefox";
