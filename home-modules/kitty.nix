@@ -51,6 +51,8 @@
       "color14" = "#009999";
       "color7" =  "#ffffff"; #white
       "color15" = "#999999";
+
+      "cursor_trail" = 1; # animate cursor movement
       
       
       "shell" = "."; # user profile
