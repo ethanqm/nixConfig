@@ -14,7 +14,7 @@
   - [ ] exe & dll analogue of readelf & ldd
   - [ ] calendar .icd
 - [ ] DaVinci Resolve find my rx580 plox
-- [ ] port:
+- [x] port:
   - [x] nvim config
   - [x] .bashrc & profile
   - [x] kitty conf
