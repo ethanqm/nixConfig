@@ -33,3 +33,6 @@ collect ~/.config/git/config ".gitconfig"
 
 # kitty
 collect ~/.config/kitty/kitty.conf "kitty.conf"
+
+# bashrc
+collect ~/.bashrc ".bashrc"

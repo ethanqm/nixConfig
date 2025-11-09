@@ -240,10 +240,6 @@
     godot
   ]);
 
-  nix.extraOptions = ''
-     keep-outputs = true
-     keep-derivations = true
-  ''; # don't gc build components
   environment.sessionVariables = {
     EDITOR = "nvim";
     BROWSER = "firefox";
@@ -251,6 +247,11 @@
     MENU = "wofi --show drun";
     TERM = "kitty";
   };
+
+  nix.extraOptions = ''
+     keep-outputs = true
+     keep-derivations = true
+  ''; # don't gc build components
 
   #home-manager standalone
   nix.settings.allowed-users = [ "user" ];

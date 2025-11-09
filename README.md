@@ -16,7 +16,7 @@
 - [ ] DaVinci Resolve find my rx580 plox
 - [ ] port:
   - [x] nvim config
-  - [ ] .bashrc & profile
+  - [x] .bashrc & profile
   - [x] kitty conf
 - [ ] options for different devices
 - [o] XDG MIMEType default associations
