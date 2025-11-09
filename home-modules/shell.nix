@@ -1,6 +1,9 @@
 { config, pkgs, ...}:
 let
   aliases = {
+    lzip = "lzip -k";
+    plzip = "plzip -k";
+    tarlz = "tarlz -k";
     ls = "ls --color=auto";
     grep = "grep --color=auto";
     cp = "cp -i";
