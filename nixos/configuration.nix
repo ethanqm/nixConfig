@@ -135,6 +135,7 @@
     tmux
     wget
     git gh glab git-credential-oauth
+    bash-completion
 
     htop btop
     neofetch
@@ -278,7 +279,8 @@
     nerd-fonts.hack
     nerd-fonts.ubuntu
     nerd-fonts.inconsolata
-    #nerd-fonts.mplus
+    nerd-fonts.bigblue-terminal
+    
   ];
 
 
