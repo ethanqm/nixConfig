@@ -162,6 +162,8 @@
     fzf
     sdcv # terminal dictionary # todo get dic't
 
+    lm_sensors
+
     udiskie # auto-mount media
 
     # hyprland
