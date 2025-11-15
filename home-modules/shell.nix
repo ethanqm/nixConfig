@@ -19,6 +19,13 @@ let
     v = "nvim";
     f = "lf";
     define = "sdcv";
+    gs = "git status";
+    ga = "git add";
+    gc = "git commit";
+    gco = "git checkout";
+    gd = "git diff";
+    gdt = "git difftool";
+    gl = "git reflog";
   };
   opt = [
     "autocd"
