@@ -125,10 +125,11 @@ let
     augroup END
   '';
   nvimLSP = '' --LUA!
-    vim.lsp.enable('gdscript')  -- godot
-    vim.lsp.enable('nixd')      -- nix
-    vim.lsp.enable('ts_ls')     -- typescript
-    vim.lsp.enable('zls')       -- zig
+    --[[godot     ]] vim.lsp.enable('gdscript')  
+    --[[html/css  ]] vim.lsp.enable('emmet-ls')       
+    --[[nix       ]] vim.lsp.enable('nixd')      
+    --[[typescript]] vim.lsp.enable('ts_ls')     
+    --[[zig       ]] vim.lsp.enable('zls')       
   '';
   nvimCmp = ''
     local cmp = require('cmp')
@@ -162,9 +163,10 @@ let
     
     local cmp_nvim_lsp = require("cmp_nvim_lsp")
     local capabilities = cmp_nvim_lsp.default_capabilities()
-    vim.lsp.config("*", {
+    vim.lsp.config('*', {
       capabilities = capabilities,
     })
+    vim.lsp.config('emmet-ls', { capabilities = capabilities }) -- why?
   '';
 in
 {

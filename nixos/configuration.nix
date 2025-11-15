@@ -215,6 +215,7 @@
     gdb lldb
     ghidra-bin imhex 
     nixd # lsp
+    emmet-ls # html/css lsp
 
     # web
     firefox 
