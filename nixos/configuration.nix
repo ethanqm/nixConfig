@@ -261,7 +261,11 @@
 
   #home-manager standalone
   nix.settings.allowed-users = [ "user" ];
-  nix.settings.experimental-features = ["nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+    "pipe-operators"
+  ];
 
   services.mullvad-vpn = {
     enable = true;
