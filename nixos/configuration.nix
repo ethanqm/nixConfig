@@ -231,7 +231,7 @@
     radeontop vulkan-tools
     obs-studio
     protonup
-    atlauncher
+    prismlauncher
 
     #compute
     boinc
