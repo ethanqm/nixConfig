@@ -160,7 +160,7 @@
     pandoc xlsx2csv poppler-utils # fancy doc tools
     heh # hex editor
     fzf
-    sdcv # terminal dictionary # todo get dic't
+    sdcv # terminal dictionary
 
     lm_sensors
 
@@ -188,6 +188,7 @@
     kdePackages.gwenview libwebp libheif
     ## pdf
     kdePackages.okular
+    calibre # epub
     
 
     # media
@@ -231,7 +232,7 @@
     radeontop vulkan-tools
     obs-studio
     protonup
-    prismlauncher
+    prismlauncher # minecraft
 
     #compute
     boinc
