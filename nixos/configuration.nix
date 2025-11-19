@@ -177,7 +177,7 @@
     waybar 
     networkmanagerapplet
     dunst libnotify
-    kitty
+    kitty ghostty
     guake
     playerctl # kb media keys
     brightnessctl # screen brightness keys
@@ -291,7 +291,8 @@
     nerd-fonts.ubuntu
     nerd-fonts.inconsolata
     nerd-fonts.bigblue-terminal
-    
+    nerd-fonts.iosevka-term-slab
+    nerd-fonts.zed-mono
   ];
 
 
