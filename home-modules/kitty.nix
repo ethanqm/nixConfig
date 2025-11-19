@@ -61,6 +61,7 @@
       "update_check_interval" = 0; # disable checking for updates
       "term" = "xterm-kitty";
       "wayland_titlebar_color" = "system"; # server-side window decorations
+      "confirm_os_window_close" = 0; # stop close confirm dialog
     };
     keybindings = {
       "kitty_mod" = "ctrl+shift";
