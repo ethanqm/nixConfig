@@ -25,13 +25,14 @@
       "enable_audio_bell" = "no"; # mute error bell
       "window_alert_on_bell" = "yes"; # taskbar indicator
 
+      "dynamic_background_opacity" = "yes"; # change without reload
+
       # color scheme
       #"foreground" = "#dddddd";
       #"background" = "#000000";
       #"background_opacity" = 0.70;
       #"background_image" = "none"; # might use, must be PNG
       #"background_image_linear" = "no"; # linear scaling
-      #"dynamic_background_opacity" = "yes"; # change without reload
       #"background_tint" = 0.0; # tint text background by bg col
       #"selection_foreground" = "#000000";
       #"selection_background" = "#fffacd";
