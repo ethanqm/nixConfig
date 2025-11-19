@@ -3,10 +3,10 @@
 
   programs.kitty = {
     enable = true;
-    font = {
-      name = "Inconsolata";
-      size = 15;
-    };
+    #font = {
+    #  name = "Inconsolata";
+    #  size = 15;
+    #};
     settings = {
       "wheel_scroll_multiplier" = 5.0;
       "touch_scroll_multiplier" = 1.0;
@@ -26,31 +26,31 @@
       "window_alert_on_bell" = "yes"; # taskbar indicator
 
       # color scheme
-      "foreground" = "#dddddd";
-      "background" = "#000000";
-      "background_opacity" = 0.70;
-      "background_image" = "none"; # might use, must be PNG
-      "background_image_linear" = "no"; # linear scaling
-      "dynamic_background_opacity" = "yes"; # change without reload
-      "background_tint" = 0.0; # tint text background by bg col
-      "selection_foreground" = "#000000";
-      "selection_background" = "#fffacd";
-      "color0" =  "#000000"; #black
-      "color8" =  "#666666";
-      "color1" =  "#ff0000"; #red
-      "color9" =  "#990000";
-      "color2" =  "#00ff00"; #green
-      "color10" = "#009900";
-      "color3" =  "#ffff00"; #yellow
-      "color11" = "#999900";
-      "color4" =  "#0000ff"; #blue
-      "color12" = "#000099";
-      "color5" =  "#ff00ff"; #magenta
-      "color13" = "#990099";
-      "color6" =  "#00ffff"; #cyan
-      "color14" = "#009999";
-      "color7" =  "#ffffff"; #white
-      "color15" = "#999999";
+      #"foreground" = "#dddddd";
+      #"background" = "#000000";
+      #"background_opacity" = 0.70;
+      #"background_image" = "none"; # might use, must be PNG
+      #"background_image_linear" = "no"; # linear scaling
+      #"dynamic_background_opacity" = "yes"; # change without reload
+      #"background_tint" = 0.0; # tint text background by bg col
+      #"selection_foreground" = "#000000";
+      #"selection_background" = "#fffacd";
+      #"color0" =  "#000000"; #black
+      #"color8" =  "#666666";
+      #"color1" =  "#ff0000"; #red
+      #"color9" =  "#990000";
+      #"color2" =  "#00ff00"; #green
+      #"color10" = "#009900";
+      #"color3" =  "#ffff00"; #yellow
+      #"color11" = "#999900";
+      #"color4" =  "#0000ff"; #blue
+      #"color12" = "#000099";
+      #"color5" =  "#ff00ff"; #magenta
+      #"color13" = "#990099";
+      #"color6" =  "#00ffff"; #cyan
+      #"color14" = "#009999";
+      #"color7" =  "#ffffff"; #white
+      #"color15" = "#999999";
 
       "cursor_trail" = 1; # animate cursor movement
       

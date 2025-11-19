@@ -2,9 +2,11 @@
 {
   programs.git = {
     enable = true;
-    userName = "ethanqm";
-    userEmail = "102937457+ethanqm@users.noreply.github.com";
-    extraConfig = {
+    settings =  {
+      user = {
+        name = "ethanqm";
+        email = "102937457+ethanqm@users.noreply.github.com";
+      };
       init.defaultBranch = "main";
 
       credential = {

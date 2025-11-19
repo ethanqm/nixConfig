@@ -166,6 +166,8 @@
 
     udiskie # auto-mount media
 
+    base16-schemes
+
     # hyprland
     wayland xwayland
     hyprland wofi
@@ -231,7 +233,7 @@
     lutris
     radeontop vulkan-tools
     obs-studio
-    protonup
+    protonup-ng
     prismlauncher # minecraft
 
     #compute

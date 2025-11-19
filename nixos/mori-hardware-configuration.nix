@@ -8,7 +8,7 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-  boot.kernelPackages = pkgs.linuxPackages_6_16; #kernel sept 2025
+  boot.kernelPackages = pkgs.linuxPackages_latest; #kernel sept 2025
   boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "usb_storage" "usbhid" "sd_mod" ];
   boot.initrd.kernelModules = [ "amdgpu" ]; # rx580
   boot.kernelModules = [ 

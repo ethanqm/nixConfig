@@ -193,7 +193,7 @@ in
     + sanskritBinds
     + windowBinds
     + filetree
-    + "colorscheme elflord"
+    #+ "colorscheme elflord"
     ;
     extraLuaConfig =
       nvimLSP
