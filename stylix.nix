@@ -16,6 +16,7 @@
       desktop = 1.0;
       popups = 1.0;
     };
+
     fonts = {
       sizes = {
         applications = 10;
@@ -28,10 +29,11 @@
       #  package = pkgs.nerd-fonts.bigblue-terminal;
       #  name = "BigBlueTermPlus Nerd Font";
       #};
-      monospace = {
+      monospace = { 
         package = pkgs.nerd-fonts.zed-mono;
-
+        name = "ZedMono Nerd Font Mono";
       };
     };
+
   };
 }

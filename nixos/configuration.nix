@@ -167,6 +167,7 @@
     udiskie # auto-mount media
 
     base16-schemes
+    font-manager
 
     # hyprland
     wayland xwayland
