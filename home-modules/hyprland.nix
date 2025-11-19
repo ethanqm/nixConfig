@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
-let 
+let
   incBrightness = x: "ddcutil -d 1 setvcp 10 + ${x} && ddcutil -d 2 setvcp 10 + ${x}";
-  decBrightness = x: "ddcutil -d 1 setvcp 10 - ${x} && ddcutil -d 2 setvcp 10 - ${x}"; 
+  decBrightness = x: "ddcutil -d 1 setvcp 10 - ${x} && ddcutil -d 2 setvcp 10 - ${x}";
 in
 {
   gtk = {
@@ -168,7 +168,7 @@ in
       ];
       debug = {
         # default 2 causes glitches with distortion shaders
-        damage_tracking = 1; 
+        damage_tracking = 1;
       };
     };
   };

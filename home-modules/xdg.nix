@@ -1,6 +1,6 @@
 { config, pkgs, lib, ...}:
 let
-  groupAssign = (types: apps: 
+  groupAssign = (types: apps:
     builtins.foldl' (acc: mimetype: {"${mimetype}" = apps;} // acc)
      {} types
   );
@@ -23,7 +23,7 @@ let
       "audio/webm" "audio/x-matroska"
       "audio/x-mpegurl" "audio/x-ms-wax"
       "audio/x-ms-wma" "audio/x-pn-realaudio"
-      "audio/x-pn-realaudio-plugin" 
+      "audio/x-pn-realaudio-plugin"
     ];
     image = [
       "image/avif" "image/avif-sequence"
@@ -56,8 +56,8 @@ let
       "image/x-sony-arw" "image/x-sony-sr2"
       "image/x-sony-srf" "image/x-xbitmap"
       "image/x-xpixmap" "image/x-xwindowdump"
-    ]; 
-    scripts = [ 
+    ];
+    scripts = [
       "application/atom+xml" "application/atomcat+xml"
       "application/atomsvc+xml" "application/ccxml+xml"
       "application/davmount+xml" "application/ecmascript"
@@ -76,7 +76,7 @@ let
       "application/vnd.adobe.xdp+xml" "application/vnd.apple.installer+xml"
       "application/vnd.chemdraw+xml" "application/vnd.criticaltools.wbs+xml"
       "application/vnd.eszigno3+xml" "application/vnd.handheld-entertainment+xml"
-      "application/vnd.irepository.package+xml" 
+      "application/vnd.irepository.package+xml"
       "application/vnd.llamagraphics.life-balance.exchange+xml"
       "application/vnd.mozilla.xul+xml" "application/vnd.oma.dd2+xml"
       "application/vnd.solent.sdkm+xml" "application/vnd.uoml+xml"
@@ -129,9 +129,9 @@ let
       "video/x-ogm+ogg" "video/x-theora+ogg"
     ];
   };
-in 
+in
 {
-  xdg = { 
+  xdg = {
     enable = true;
     portal = {
       enable = true;
@@ -152,7 +152,7 @@ in
     mimeApps = {
       enable = true;
       # override with associations.{added,removed}
-      defaultApplications = 
+      defaultApplications =
         groupAssign mime.video [ "mpv.desktop" "vlc.desktop" ] //
         groupAssign mime.audio [ "mpv.desktop" "vlc.desktop" ] //
         groupAssign mime.image [ "org.kde.gwenview.desktop" ] //

@@ -96,8 +96,8 @@
   users.users.user = {
     isNormalUser = true;
     description = "user";
-    extraGroups = [ 
-      "networkmanager" 
+    extraGroups = [
+      "networkmanager"
       "wheel"
       "boinc"
       "i2c" # brightness control
@@ -175,7 +175,7 @@
     hyprshade
     hyprpaper
     hyprshot
-    waybar 
+    waybar
     networkmanagerapplet
     dunst libnotify
     kitty ghostty
@@ -217,19 +217,19 @@
     nodejs_24 bun typescript typescript-language-server
     zig zls
     gdb lldb
-    ghidra-bin imhex 
+    ghidra-bin imhex
     nixd # lsp
     emmet-ls # html/css lsp
 
     # web
-    firefox 
+    firefox
     mullvad-vpn
     qbittorrent
     discord
     brave
 
     # gaming
-    steam wine 
+    steam wine
     itch
     lutris
     radeontop vulkan-tools

@@ -11,7 +11,7 @@
   boot.kernelPackages = pkgs.linuxPackages_latest; #kernel sept 2025
   boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "usb_storage" "usbhid" "sd_mod" ];
   boot.initrd.kernelModules = [ "amdgpu" ]; # rx580
-  boot.kernelModules = [ 
+  boot.kernelModules = [
     "kvm-amd"
     "i2c-dev" # brightness control
   ];
@@ -26,7 +26,7 @@
   # amd rx580
   services.xserver.enable = true;
   services.xserver.videoDrivers = [ "amdgpu" ];
-  hardware.graphics.extraPackages = with pkgs; [ 
+  hardware.graphics.extraPackages = with pkgs; [
     rocmPackages.clr.icd
     libva-utils
   ];

@@ -4,7 +4,7 @@
     enable = true;
     settings = {
       main = {
-        modules-right = [ 
+        modules-right = [
           "cpu"
           "memory"
           "pulseaudio"

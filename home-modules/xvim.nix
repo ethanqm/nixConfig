@@ -27,7 +27,7 @@ let
     set syntax=on
     " don't highlight searches
     set nohlsearch
-    " disable linewrap 
+    " disable linewrap
     set nowrap
     " keep folder clean
     set noswapfile
@@ -53,7 +53,7 @@ let
     " toggle invisible characters
     nnoremap <silent> <leader>s :setlocal list!<cr>
   '';
-  sanskritBinds = '' 
+  sanskritBinds = ''
     "SANSKRIT BINDS
     inoremap <C-k>.l ḷ
     inoremap <C-k>.r ṛ
@@ -83,8 +83,8 @@ let
   '';
   filetree = ''
     "FILE TREE
-    "" thanks: 
-    """ https://shapeshed.com/vim-netrw/ 
+    "" thanks:
+    """ https://shapeshed.com/vim-netrw/
     """ https://vonheikemen.github.io/devlog/tools/using-netrw-vim-builtin-file-explorer/
     "" set directory tree view
     let g:netrw_liststyle= 3
@@ -127,11 +127,11 @@ let
     augroup END
   '';
   nvimLSP = '' --LUA!
-    --[[godot     ]] vim.lsp.enable('gdscript')  
-    --[[html/css  ]] vim.lsp.enable('emmet-ls')       
-    --[[nix       ]] vim.lsp.enable('nixd')      
-    --[[typescript]] vim.lsp.enable('ts_ls')     
-    --[[zig       ]] vim.lsp.enable('zls')       
+    --[[godot     ]] vim.lsp.enable('gdscript')
+    --[[html/css  ]] vim.lsp.enable('emmet-ls')
+    --[[nix       ]] vim.lsp.enable('nixd')
+    --[[typescript]] vim.lsp.enable('ts_ls')
+    --[[zig       ]] vim.lsp.enable('zls')
 
     vim.opt.signcolumn="number" -- put icons in number column
   '';
@@ -176,7 +176,7 @@ in
 {
   programs.vim = {
     enable = true;
-    extraConfig = 
+    extraConfig =
       extraSettings
     + binds
     + sanskritBinds
@@ -191,7 +191,7 @@ in
     viAlias = true;
     #vimAlias = true; # keep false
     vimdiffAlias = true;
-    extraConfig = 
+    extraConfig =
       extraSettings
     + binds
     + sanskritBinds

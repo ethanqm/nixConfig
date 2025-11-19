@@ -29,7 +29,7 @@
       #  package = pkgs.nerd-fonts.bigblue-terminal;
       #  name = "BigBlueTermPlus Nerd Font";
       #};
-      monospace = { 
+      monospace = {
         package = pkgs.nerd-fonts.zed-mono;
         name = "ZedMono Nerd Font Mono";
       };

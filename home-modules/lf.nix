@@ -26,15 +26,15 @@
             sed 's/^  //')
 
           vid="$(echo "$INF" | jq '.media.track.[1] | {
-            Resolution: "\(.Width)x\(.Height)", 
-            FPS: .FrameRate, 
-            "Colour Depth": .BitDepth, 
+            Resolution: "\(.Width)x\(.Height)",
+            FPS: .FrameRate,
+            "Colour Depth": .BitDepth,
             Encode: .Encoded_Library
             }
           ' | sed 's/^  //' | sed 's/,$//' )"
 
           lang="$(echo $INF | jq -j -c '[.media.track.[] | {T: ."@type", Language}] | .[2:] |
-             reduce .[] as {$T, $Language} ({Audio: [], Subs: []}; 
+             reduce .[] as {$T, $Language} ({Audio: [], Subs: []};
                if ($T == "Audio") then .Audio += [$Language]
                  elif ($T == "Text") then .Subs += [$Language] end)' |
                   sed "s/null/Unknown/g" | sed 's/[//g' | sed "s/],\?//g" | sed 's/:/: /g' )"
@@ -44,7 +44,7 @@
           )"
 
           echo "$((echo "$vid" && echo "$duration" && echo "$lang" && echo "$chap") |
-            sed "s/Subs/\nSubs/" | 
+            sed "s/Subs/\nSubs/" |
             sed "s/[{}]*//g" | sed 's/"//g' )"
         }
         
@@ -55,7 +55,7 @@
         SQLITE_TABLE_LIMIT=20
         SQLITE_ROW_LIMIT=5
         PV_WIDTH=35
-        sqlprev() {  
+        sqlprev() {
           sqlite_tables="$( sqlite3 "file:''${FILE_PATH}?mode=ro" '.tables' )" \
             || exit 1
           [ -z "''${sqlite_tables}" ] &&
