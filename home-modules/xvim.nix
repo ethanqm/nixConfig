@@ -9,6 +9,8 @@ let
     set number
     " line distance
     set relativenumber
+    " number column size
+    set numberwidth=2
 
     " spaces instead of tab
     set expandtab
@@ -130,6 +132,8 @@ let
     --[[nix       ]] vim.lsp.enable('nixd')      
     --[[typescript]] vim.lsp.enable('ts_ls')     
     --[[zig       ]] vim.lsp.enable('zls')       
+
+    vim.opt.signcolumn="number" -- put icons in number column
   '';
   nvimCmp = ''
     local cmp = require('cmp')
