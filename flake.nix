@@ -55,6 +55,8 @@
       };
     };
     # setup for non-nixos devices
+    # https://www.reddit.com/r/NixOS/comments/18eomkl/comment/kcrijan/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button
+    # https://github.com/kaleocheng/nix-dots
     #homeConfigurations = {
     #  user = home-manager.lib.homeManagerConfiguration {
     #    inherit pkgs;
