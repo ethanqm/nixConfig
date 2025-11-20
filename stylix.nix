@@ -30,8 +30,8 @@
       #  name = "BigBlueTermPlus Nerd Font";
       #};
       monospace = {
-        package = pkgs.nerd-fonts.zed-mono;
-        name = "ZedMono Nerd Font Mono";
+        package = pkgs.nerd-fonts.inconsolata;
+        name = "Inconsolata";
       };
     };
 
