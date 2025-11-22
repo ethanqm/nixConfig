@@ -12,7 +12,7 @@
 	format = "openpgp"
 
 [gpg "openpgp"]
-	program = "/nix/store/sws8hkfjlnmmbnr9r1lla2vr0da9dip3-gnupg-2.4.8/bin/gpg"
+	program = "/nix/store/w9nspykfk0c7s2zjh15g09zfsmkhcbzd-gnupg-2.4.8/bin/gpg"
 
 [init]
 	defaultBranch = "main"

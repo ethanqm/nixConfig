@@ -20,7 +20,7 @@
     fonts = {
       sizes = {
         applications = 10;
-        terminal = 15;
+        terminal = 14;
         desktop = 10;
         popups = 10;
       };

@@ -1,3 +1,120 @@
+window#waybar, tooltip {
+    background: alpha(@base00, 1.000000);
+}
+
+* {
+    font-family: "Inconsolata";
+    font-size: 10pt;
+}
+
+@define-color base00 #131513; @define-color base01 #242924;
+@define-color base02 #5e6e5e; @define-color base03 #687d68;
+@define-color base04 #809980; @define-color base05 #8ca68c;
+@define-color base06 #cfe8cf; @define-color base07 #f4fbf4;
+
+@define-color base08 #e6193c; @define-color base09 #87711d;
+@define-color base0A #98981b; @define-color base0B #29a329;
+@define-color base0C #1999b3; @define-color base0D #3d62f5;
+@define-color base0E #ad2bee; @define-color base0F #e619c3;
+window#waybar, tooltip {
+    color: @base05;
+}
+
+tooltip {
+    border-color: @base0D;
+}
+
+tooltip label {
+    color: @base05;
+}
+#wireplumber,
+#pulseaudio,
+#sndio {
+  padding: 0 5px;
+}
+#wireplumber.muted,
+#pulseaudio.muted,
+#sndio.muted {
+  padding: 0 5px;
+}
+#upower,
+#battery {
+  padding: 0 5px;
+}
+#upower.charging,
+#battery.Charging {
+  padding: 0 5px;
+}
+#network {
+  padding: 0 5px;
+}
+#network.disconnected {
+  padding: 0 5px;
+}
+#user {
+  padding: 0 5px;
+}
+#clock {
+  padding: 0 5px;
+}
+#backlight {
+  padding: 0 5px;
+}
+#cpu {
+  padding: 0 5px;
+}
+#disk {
+  padding: 0 5px;
+}
+#idle_inhibitor {
+  padding: 0 5px;
+}
+#temperature {
+  padding: 0 5px;
+}
+#mpd {
+  padding: 0 5px;
+}
+#language {
+  padding: 0 5px;
+}
+#keyboard-state {
+  padding: 0 5px;
+}
+#memory {
+  padding: 0 5px;
+}
+#window {
+  padding: 0 5px;
+}
+#bluetooth {
+  padding: 0 5px;
+}
+#bluetooth.disabled {
+  padding: 0 5px;
+}
+.modules-left #workspaces button {
+    border-bottom: 3px solid transparent;
+}
+.modules-left #workspaces button.focused,
+.modules-left #workspaces button.active {
+    border-bottom: 3px solid @base05;
+}
+.modules-center #workspaces button {
+    border-bottom: 3px solid transparent;
+}
+.modules-center #workspaces button.focused,
+.modules-center #workspaces button.active {
+    border-bottom: 3px solid @base05;
+}
+.modules-right #workspaces button {
+    border-bottom: 3px solid transparent;
+}
+.modules-right #workspaces button.focused,
+.modules-right #workspaces button.active {
+    border-bottom: 3px solid @base05;
+}
+
       * {
       /* `otf-font-awesome` is required to be installed for icons */
       font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;

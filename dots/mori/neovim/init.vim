@@ -6,6 +6,8 @@ set mouse=a
 set number
 " line distance
 set relativenumber
+" number column size
+set numberwidth=2
 
 " spaces instead of tab
 set expandtab
@@ -22,7 +24,7 @@ set clipboard+=unnamedplus
 set syntax=on
 " don't highlight searches
 set nohlsearch
-" disable linewrap 
+" disable linewrap
 set nowrap
 " keep folder clean
 set noswapfile
@@ -70,8 +72,8 @@ nnoremap <silent> <C-right> :vertical resize +3<CR>
 nnoremap <silent> <C-up> :resize -3<CR>
 nnoremap <silent> <C-down> :resize +3<CR>
 "FILE TREE
-"" thanks: 
-""" https://shapeshed.com/vim-netrw/ 
+"" thanks:
+""" https://shapeshed.com/vim-netrw/
 """ https://vonheikemen.github.io/devlog/tools/using-netrw-vim-builtin-file-explorer/
 "" set directory tree view
 let g:netrw_liststyle= 3
@@ -94,4 +96,18 @@ augroup END
 
 " bind open/close toggle
 nnoremap <silent> <leader>a :Lexplore<cr>
-colorscheme elflord
+"VIMSCRIPT!
+ let g:firenvim_config = {
+   \ 'globalSettings': {
+     \ 'alt': 'all',
+     \  },
+   \ 'localSettings': {
+     \ '.*': {
+       \ 'cmdline': 'neovim',
+       \ 'content': 'text',
+       \ 'priority': 0,
+       \ 'selector': 'textarea',
+       \ 'takeover': 'never',
+       \ },
+     \ }
+   \ }

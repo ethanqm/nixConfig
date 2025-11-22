@@ -50,18 +50,27 @@ alias fo=fuckoff
 alias free='free -m'
 alias fucking=sudo
 alias fuckoff='pkill -9 -i'
+alias ga='git add'
+alias gc='git commit'
+alias gco='git checkout'
+alias gd='git diff'
+alias gdt='git difftool'
+alias gl='git reflog'
 alias grep='grep --color=auto'
+alias gs='git status'
 alias ls='ls --color=auto'
+alias lzip='lzip -k'
 alias mansplain=man
 alias more=less
 alias please=sudo
+alias plzip='plzip -k'
 alias py=python3
 alias susdo=sudo
 alias v=nvim
 alias vimdiff='nvim -d'
 
 if [[ ! -v BASH_COMPLETION_VERSINFO ]]; then
-  . "/nix/store/56j4q0ry33aifi9vck2vxdwg4drp4167-bash-completion-2.16.0/etc/profile.d/bash_completion.sh"
+  . "/nix/store/an1k68bpqj8sas0zcd3dq33pjkphkb8a-bash-completion-2.17.0/etc/profile.d/bash_completion.sh"
 fi
 
 if test -n "$KITTY_INSTALLATION_DIR"; then

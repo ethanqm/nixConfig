@@ -126,6 +126,22 @@ let
       autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
     augroup END
   '';
+  nvimFirenvim = '' "VIMSCRIPT!
+  let g:firenvim_config = {
+    \ 'globalSettings': {
+      \ 'alt': 'all',
+      \  },
+    \ 'localSettings': {
+      \ '.*': {
+        \ 'cmdline': 'neovim',
+        \ 'content': 'text',
+        \ 'priority': 0,
+        \ 'selector': 'textarea',
+        \ 'takeover': 'never',
+        \ },
+      \ }
+    \ }
+  '';
   nvimLSP = '' --LUA!
     --[[godot     ]] vim.lsp.enable('gdscript')
     --[[html/css  ]] vim.lsp.enable('emmet-ls')
@@ -198,6 +214,7 @@ in
     + windowBinds
     + filetree
     #+ "colorscheme elflord"
+    + nvimFirenvim
     ;
     extraLuaConfig =
       nvimLSP
