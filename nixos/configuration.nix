@@ -138,7 +138,7 @@
     bash-completion
 
     htop btop
-    neofetch
+    fastfetch # neofetch replacement
 
     bc
 
