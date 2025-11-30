@@ -4,6 +4,10 @@
     enable = true;
     mouse = true;
     clock24 = true;
+    plugins = with pkgs.tmuxPlugins; [
+      resurrect
+      continuum
+    ];
     extraConfig = ''
       # fix scrollwheel in LESS / man
       # https://github.com/tmux/tmux/issues/1320#issuecomment-381952082
