@@ -64,6 +64,17 @@
   services.xserver.displayManager.lightdm.enable = true;
   services.xserver.desktopManager.xfce.enable = true;
 
+  # Enable KDE
+  #services.displayManager.sddm.enable = true;
+  services.desktopManager.plasma6 = {
+    enable = true;
+    enableQt5Integration = true;
+  };
+  environment.plasma6.excludePackages = with pkgs.kdePackages; [
+    baloo # slow :(
+    baloo-widgets
+  ];
+
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";
