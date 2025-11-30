@@ -143,6 +143,7 @@ let
     \ }
   '';
   nvimLSP = '' --LUA!
+    --[[asm       ]] vim.lsp.enable('asm-lsp')
     --[[godot     ]] vim.lsp.enable('gdscript')
     --[[html/css  ]] vim.lsp.enable('emmet-ls')
     --[[nix       ]] vim.lsp.enable('nixd')
@@ -187,6 +188,7 @@ let
       capabilities = capabilities,
     })
     vim.lsp.config('emmet-ls', { capabilities = capabilities }) -- why?
+    vim.lsp.config('asm-lsp', { capabilities = capabilities }) -- why?
   '';
 in
 {

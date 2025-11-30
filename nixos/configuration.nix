@@ -216,10 +216,12 @@
     python314
     nodejs_24 bun typescript typescript-language-server
     zig zls
+    gcc
     gdb lldb
     ghidra-bin imhex
     nixd # lsp
     emmet-ls # html/css lsp
+    asm-lsp
 
     # web
     firefox
