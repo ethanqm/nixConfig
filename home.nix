@@ -4,7 +4,7 @@
   imports = [
     ./home-modules/xvim.nix
     ./home-modules/hyprland.nix
-    ./home-modules/waybar.nix
+    #./home-modules/waybar.nix
     ./home-modules/lf.nix
     ./home-modules/xdg.nix
     ./home-modules/tmux.nix

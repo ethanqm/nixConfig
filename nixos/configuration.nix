@@ -186,7 +186,7 @@
     hyprshade
     hyprpaper
     hyprshot
-    waybar
+    #waybar
     networkmanagerapplet
     dunst libnotify
     kitty ghostty
