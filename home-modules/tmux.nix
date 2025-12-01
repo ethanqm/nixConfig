@@ -4,7 +4,7 @@
     enable = true;
     mouse = true;
     clock24 = true;
-    plugins = with pkgs.tmuxPlugins; [
+    plugins = with pkgs; with tmuxPlugins; [
       resurrect
       continuum
     ];
@@ -28,6 +28,12 @@
       # keep first window at left hand
       set -g base-index 1
       set -g pane-base-index 1
+
+      ########################
+      # Plugin After
+      ########################
+      # enable continuum
+      set -g @continuum-restore 'on'
     '';
   };
 }
