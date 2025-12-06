@@ -154,6 +154,7 @@
     bc
 
     tree
+    nix-tree
     file
     lf #file tui
     ranger # ${pkg.ranger}/share/doc/ranger/config/scope.sh is nice but broken in lf
