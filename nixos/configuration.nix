@@ -243,7 +243,8 @@
     brave
 
     # gaming
-    steam wine
+    steam 
+    wine winetricks
     itch
     lutris
     radeontop vulkan-tools
