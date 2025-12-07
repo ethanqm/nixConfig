@@ -211,6 +211,7 @@
     youtube-music
     yt-dlp
     hakuneko # dl + read: manga + comic
+    kiwix kiwix-tools # ZIM files - offline web browsing
 
     # wlan connect
     kdePackages.kdeconnect-kde
