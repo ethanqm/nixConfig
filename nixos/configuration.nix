@@ -243,7 +243,7 @@
     brave
 
     # gaming
-    steam 
+    steam protontricks
     wine winetricks
     itch
     lutris
