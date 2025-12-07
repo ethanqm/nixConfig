@@ -168,14 +168,21 @@ in
       ;
     };
     userDirs.createDirectories = true;
-    desktopEntries.vim = {
-      name = "Vim";
-      terminal = true;
-      # always opens new term...
-      ## default term; tmux?
-      exec = "kitty vim %F";
-      type = "Application";
-      mimeType = mime.text;
+    desktopEntries = {
+      vim = {
+        name = "Vim";
+        terminal = true;
+          # always opens new term...
+          ## default term; tmux?
+        exec = "kitty vim %F";
+        type = "Application";
+        mimeType = mime.text;
+      };
+      hakuneko = {
+        name = "Hakuneko [temp fix]";
+        type = "Application";
+        exec = "hakuneko --no-sandbox"; # fix crash on launch 07 Dec 2025
+      };
     };
   };
 }
