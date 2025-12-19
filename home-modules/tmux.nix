@@ -35,7 +35,7 @@
       # enable continuum
       set -g @continuum-restore 'on'
       # enable systemd service
-      set -g @continuum-boot 'on'
+      set -g @continuum-boot 'on' #broken on NixOS :/
     '';
   };
 }
