@@ -251,7 +251,7 @@
     radeontop vulkan-tools
     obs-studio
     protonup-ng
-    prismlauncher # minecraft
+    prismlauncher ftb-app# minecraft
 
     #compute
     boinc
