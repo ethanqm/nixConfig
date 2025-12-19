@@ -242,6 +242,7 @@
     qbittorrent
     discord
     brave
+    megacmd # mega.nz cli
 
     # gaming
     steam protontricks
