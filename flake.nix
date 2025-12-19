@@ -31,12 +31,17 @@
   {
     nixosConfigurations = {
       lapnix = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs system; };
+        specialArgs = { inherit inputs system stable; };
         modules = [ 
           ./nixos/configuration.nix
           ./nixos/lapnix-hardware-configuration.nix
           stylix.nixosModules.stylix
           ./stylix.nix
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.users.user = import ./home.nix;
+          }
         ];
       };
       mori = nixpkgs.lib.nixosSystem {
