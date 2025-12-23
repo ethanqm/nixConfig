@@ -3,7 +3,7 @@
   stylix = {
     enable = true;
     # wallpaper
-    image = ./home-modules/wallpapers/aesthetic-sailor-moon-3z3wzc7rf9fipos2.jpg;
+    image = ./home-modules/wallpapers/demonBanquet-RyoUtsumuri.webp;
     # Check: https://tinted-theming.github.io/tinted-gallery/
     #        https://github.com/tinted-theming/schemes/tree/spec-0.11/base16
     # I like:
