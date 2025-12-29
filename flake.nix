@@ -80,11 +80,16 @@
 
     nixOnDroidConfigurations.default = nix-on-droid.lib.nixOnDroidConfiguration {
       pkgs = import nixpkgs { system = "aarch64-linux"; };
+      specialArgs = { inherit inputs system stable; };
       modules = [ 
         ./stylix.nix
         ./programs/CLIminimal.nix
+        home-manager.nixosModules.home-manager {
+          home-manager.useGlobalPkgs = true;
+          home-manager.users.default = import ./home.nix;
+        }
       ];
-      home-manager.users.default = import ./home.nix;
+      #home-manager.users.default = import ./home.nix;
     };
     # setup for non-nixos devices
     # https://www.reddit.com/r/NixOS/comments/18eomkl/comment/kcrijan/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button
