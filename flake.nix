@@ -12,9 +12,14 @@
       url = "github:nix-community/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-on-droid = {
+      url = "github:nix-community/nix-on-droid";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
+    };
   };
 
-  outputs = { nixpkgs, home-manager, stable-pkgs, stylix, ... }@inputs:
+  outputs = { nixpkgs, home-manager, stable-pkgs, stylix, nix-on-droid, ... }@inputs:
   let
     system = "x86_64-linux";
     pkgs = import nixpkgs {
@@ -58,6 +63,11 @@
           }
         ];
       };
+    };
+
+    nixOnDroidConfigurations.default = nix-on-droid.lib.nixOnDroidConfiguration {
+      pkgs = import nixpkgs { system = "aarch64-linux"; };
+      modules = [ ];
     };
     # setup for non-nixos devices
     # https://www.reddit.com/r/NixOS/comments/18eomkl/comment/kcrijan/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button
