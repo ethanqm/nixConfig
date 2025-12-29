@@ -153,6 +153,8 @@
 
     bc
 
+    ffmpeg
+    yt-dlp
     tree
     nix-tree
     file
@@ -181,20 +183,29 @@
     base16-schemes
     font-manager
 
-    # hyprland
-    wayland xwayland
-    hyprland wofi
-    hyprshade
-    hyprpaper
-    hyprshot
-    #waybar
-    networkmanagerapplet
-    dunst libnotify
+    # dev
+    python314
+    nodejs_24 bun typescript typescript-language-server
+    zig zls
+    gcc
+    gdb lldb
+    nixd # lsp
+    emmet-ls # html/css lsp
+    asm-lsp
+
+    # wlan connect
+    kdePackages.kdeconnect-kde
+
+    megacmd # mega.nz cli
+
+    # GUI
     kitty ghostty
     guake
-    playerctl # kb media keys
-    brightnessctl # screen brightness keys
-    ddcutil
+
+    # Desktop
+    networkmanagerapplet
+    dunst libnotify
+    wofi
 
     # file explorer
     kdePackages.dolphin
@@ -205,16 +216,11 @@
     kdePackages.okular
     calibre # epub
     
-
     # media
-    vlc mpv ffmpeg
+    vlc mpv 
     youtube-music
-    yt-dlp
     hakuneko # dl + read: manga + comic
     kiwix kiwix-tools # ZIM files - offline web browsing
-
-    # wlan connect
-    kdePackages.kdeconnect-kde
 
     obsidian # note taking
 
@@ -224,17 +230,7 @@
     inkscape
     davinci-resolve # todo: https://nixos.wiki/wiki/DaVinci_Resolve
     blender
-
-    # dev
-    python314
-    nodejs_24 bun typescript typescript-language-server
-    zig zls
-    gcc
-    gdb lldb
     ghidra-bin imhex
-    nixd # lsp
-    emmet-ls # html/css lsp
-    asm-lsp
 
     # web
     firefox
@@ -242,7 +238,6 @@
     qbittorrent
     discord
     brave
-    megacmd # mega.nz cli
 
     # gaming
     steam protontricks
@@ -260,6 +255,17 @@
     # work
     microsoft-edge
     zoom-us
+
+    # hyprland
+    wayland xwayland
+    hyprland
+    hyprshade
+    hyprpaper
+    hyprshot
+    #waybar
+    playerctl # kb media keys
+    brightnessctl # screen brightness keys
+    ddcutil
   ])
   ++
   (with stable; [
