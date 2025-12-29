@@ -36,12 +36,18 @@
   {
     nixosConfigurations = {
       lapnix = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs system stable; };
+        specialArgs = { inherit inputs system stable;};
         modules = [ 
           ./nixos/configuration.nix
           ./nixos/lapnix-hardware-configuration.nix
           stylix.nixosModules.stylix
           ./stylix.nix
+          ./programs/CLIminimal.nix
+          ./programs/GUIminimal.nix
+          ./programs/desktopWeb.nix
+          ./programs/dev.nix
+          ./programs/gaming.nix
+          {config.gaming.enable = true;}
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
@@ -56,6 +62,13 @@
           ./nixos/mori-hardware-configuration.nix
           stylix.nixosModules.stylix
           ./stylix.nix
+          ./programs/CLIminimal.nix
+          ./programs/GUIminimal.nix
+          ./programs/desktopWeb.nix
+          ./programs/dev.nix
+          ./programs/gaming.nix
+          {config.gaming.enable = true;}
+          ./programs/work.nix
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
@@ -67,7 +80,10 @@
 
     nixOnDroidConfigurations.default = nix-on-droid.lib.nixOnDroidConfiguration {
       pkgs = import nixpkgs { system = "aarch64-linux"; };
-      modules = [ ./stylix.nix ];
+      modules = [ 
+        ./stylix.nix
+        ./programs/CLIminimal.nix
+      ];
       home-manager.users.default = import ./home.nix;
     };
     # setup for non-nixos devices
