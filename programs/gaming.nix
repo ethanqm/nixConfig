@@ -1,4 +1,4 @@
-{ lib, config, pkgs, ... }:
+{ lib, config, pkgs, stable, ... }:
 {
   options = {
     gaming.enable = lib.mkEnableOption "Installs all gaming progs";
@@ -11,12 +11,15 @@
         # gaming
         steam protontricks
         wine winetricks
-        itch
+        # itch # brokey
         lutris
         radeontop vulkan-tools
         obs-studio
         protonup-ng
         prismlauncher ftb-app# minecraft
+    ])
+    ++ (with stable; [
+      itch
     ]);
   };
 }

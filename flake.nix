@@ -7,7 +7,7 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    stable-pkgs.url = "github:nixos/nixpkgs?ref=nixos-25.05";
+    stable-pkgs.url = "github:nixos/nixpkgs?ref=nixos-25.11";
     stylix = {
       url = "github:nix-community/stylix";
       inputs.nixpkgs.follows = "nixpkgs";

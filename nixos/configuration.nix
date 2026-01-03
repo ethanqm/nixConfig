@@ -146,7 +146,7 @@
 
 # media
             vlc mpv 
-            youtube-music
+            pear-desktop # youtube-music changed name for TM reasons
             
             hakuneko # dl + read: manga + comic
 
