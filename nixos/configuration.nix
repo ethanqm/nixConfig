@@ -247,6 +247,9 @@
         environment.sessionVariables.XDG_DESKTOP_PORTAL_DIR="/run/current-system/sw/share/xdg-desktop-portal/portals";
         environment.sessionVariables.GTK_USE_PORTAL=1;
 
+  # tmux plox werk
+  systemd.user.services.tmux.enable = true;
+
 
 # This value determines the NixOS release from which the default
 # settings for stateful data, like file locations and database versions
