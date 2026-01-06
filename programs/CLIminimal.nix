@@ -1,21 +1,21 @@
 {pkgs, ...}: {
   environment.systemPackages = (with pkgs; [
       vim neovim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-      tmux
-      wget
-      git gh glab git-credential-oauth
-      bash-completion
+      tmux # terminal multiplexer
+      wget # download from url
+      git gh glab git-credential-oauth # source control
+      bash-completion # tab-completion upgrade (?)
 
-      htop btop
+      htop btop # system monitoring
       fastfetch # neofetch replacement
 
-      bc
+      bc # basic calculator
 
-      ffmpeg
-      yt-dlp
-      tree
-      nix-tree
-      file
+      ffmpeg # media converter
+      yt-dlp # youtube downloader
+      tree   # show directory tree
+      nix-tree # show nix profile and dependencies structure
+      file # file type
       lf #file tui
       ranger # ${pkg.ranger}/share/doc/ranger/config/scope.sh is nice but broken in lf
       xdg-utils # mime-type tools
@@ -31,18 +31,16 @@
       jq fastgron # json tools
       pandoc xlsx2csv poppler-utils # fancy doc tools
       heh # hex editor
-      fzf
+      fzf # fuzzy finder
       sdcv # terminal dictionary
 
-      lm_sensors
+      lm_sensors # cpu temp
 
       udiskie # auto-mount media
 
-      base16-schemes
-      font-manager
+      base16-schemes # colorschemes
 
-      # wlan connect
-      kdePackages.kdeconnect-kde
+      kdePackages.kdeconnect-kde # linux/android wan connection
       megacmd # mega.nz cli
       qrcp # send files over wifi by scanning QR code
       qrrs # terminal QR code

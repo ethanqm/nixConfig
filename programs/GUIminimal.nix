@@ -18,5 +18,8 @@
 
       ## pdf
       kdePackages.okular
+      
+      # font display
+      font-manager
   ]);
 }
