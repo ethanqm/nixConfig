@@ -44,5 +44,7 @@
       # wlan connect
       kdePackages.kdeconnect-kde
       megacmd # mega.nz cli
+      qrcp # send files over wifi by scanning QR code
+      qrrs # terminal QR code
       ]);
 }
