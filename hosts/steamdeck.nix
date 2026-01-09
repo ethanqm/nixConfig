@@ -4,6 +4,8 @@
   home.username = "deck";
   home.homeDirectory = "/home/deck";
 
+  targets.genericLinux.enable = true;
+
   programs.bash = {
     enable = true;
     initExtra = ''
