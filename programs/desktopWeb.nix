@@ -6,5 +6,6 @@
       qbittorrent
       discord
       brave
+      megasync
   ]);
 }
