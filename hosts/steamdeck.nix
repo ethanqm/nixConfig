@@ -27,4 +27,5 @@
     nix-tree
     megasync
   ]);
+  services.megasync.enable = true;
 }
