@@ -96,6 +96,7 @@
   #jack.enable = true;
           extraConfig = {
             # chromium apps reset mic vol to ~25% without permission
+            #TODO this generates wrong, buncha quotes and colons
             pipewire-pulse."99-chromium-mic-vol-fix" = {
               "pulse.rules" = [
                 {
