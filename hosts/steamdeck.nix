@@ -19,6 +19,8 @@
   home.stateVersion = "26.05"; # don't change this even if you upgrade your channel in the future, this should stay the same as the version you first installed nix on
 
   programs.home-manager.enable = true;
+
+  nixpkgs.config.allowUnfree = true;
   home.packages = (with pkgs; [
     megasync
   ]);
