@@ -26,6 +26,7 @@
   home.packages = (with pkgs; [
     nix-tree
     megasync
+    megacmd
   ]);
   services.megasync.enable = true;
 }
