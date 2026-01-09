@@ -27,6 +27,7 @@
     nix-tree
     megasync
     megacmd
+    arx-libertatis
   ]);
   services.megasync.enable = true;
 }
