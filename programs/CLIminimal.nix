@@ -8,6 +8,8 @@
 
       htop btop # system monitoring
       fastfetch # neofetch replacement
+      
+      avahi # zeroconf mDNS for hostname local access
 
       bc # basic calculator
 
