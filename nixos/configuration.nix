@@ -173,6 +173,7 @@
 # editing
             audacity
             krita
+            gimp
             inkscape
             davinci-resolve # todo: https://nixos.wiki/wiki/DaVinci_Resolve
             blender

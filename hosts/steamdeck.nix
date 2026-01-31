@@ -6,6 +6,7 @@
 
   targets.genericLinux.enable = true;
 
+
   programs.bash = {
     enable = true;
     initExtra = ''
