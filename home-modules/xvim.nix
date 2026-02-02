@@ -218,7 +218,7 @@ in
     #+ "colorscheme elflord"
     + nvimFirenvim
     ;
-    extraLuaConfig =
+    initLua =
       nvimLSP
     + nvimCmp
     ;
