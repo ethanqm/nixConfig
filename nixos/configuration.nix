@@ -178,6 +178,7 @@
             blender
             ghidra-bin imhex
             calibre # epub
+            obsidian # note taking/viewing
 
 #compute
             boinc
@@ -186,7 +187,6 @@
             ++
             (with stable; [
              godot
-             obsidian # note taking/viewing
             ]);
 
         environment.pathsToLink = [ "/share/bash-completion" ];
