@@ -168,7 +168,6 @@
             hakuneko # dl + read: manga + comic
 
             kiwix kiwix-tools # ZIM files - offline web browsing
-            obsidian # note taking/viewing
 
 # editing
             audacity
@@ -187,6 +186,7 @@
             ++
             (with stable; [
              godot
+             obsidian # note taking/viewing
             ]);
 
         environment.pathsToLink = [ "/share/bash-completion" ];
