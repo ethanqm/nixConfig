@@ -3,7 +3,7 @@
       # terminal emulators
       kitty 
       #ghostty
-      guake
+      kdePackages.yakuake
 
       networkmanagerapplet  # wifi systray
       dunst libnotify       # desktop notifications
