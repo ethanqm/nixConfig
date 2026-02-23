@@ -1,7 +1,10 @@
-{pkgs, ...}: {
+{pkgs,stable, ...}: {
   environment.systemPackages = (with pkgs; [
-    microsoft-edge
     zoom-us
     google-chrome
+  ])
+  ++
+  (with stable; [
+    microsoft-edge
   ]);
 }
