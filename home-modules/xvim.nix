@@ -39,6 +39,8 @@ let
     set wildmode=longest,list,full
     " display invisible characters | see BINDS
     set listchars=tab:>-,space:·,nbsp:␣,trail:•,eol:$,precedes:«,extends:»
+    " recurse down directories with find command
+    set path+=,**
 
     " transparent background
     highlight Normal guibg=NONE
