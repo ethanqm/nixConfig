@@ -205,6 +205,11 @@ let
       completion = { nvim_cmp = true, },
       legacy_commands = false,
       ui = {enable = false,}, -- suppress error: conceallevel=0, no cool unicode md rendering
+      note_id_func = function(title) return title end,
+      note_path_func = function(spec)
+        local path = spec.dir / tostring(spec.id)
+        return path:with_suffix(".md")
+      end,
     })
   '';
 in
