@@ -34,6 +34,7 @@
       pandoc xlsx2csv poppler-utils # fancy doc tools
       heh # hex editor
       fzf # fuzzy finder
+      ripgrep # faster grep
       sdcv # terminal dictionary
 
       lm_sensors # cpu temp
@@ -43,7 +44,8 @@
       base16-schemes # colorschemes
 
       kdePackages.kdeconnect-kde # linux/android wan connection
-      megacmd # mega.nz cli
+      megacmd # mega.nz cli ~ haven't really gotten working
+
       qrcp # send files over wifi by scanning QR code
       qrrs # terminal QR code
       ]);
