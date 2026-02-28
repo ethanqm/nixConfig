@@ -10,8 +10,9 @@
     # selenized-[light|dark]
     # atelier seaside (dark)
     base16Scheme = "${pkgs.base16-schemes}/share/themes/atelier-seaside.yaml";
+    polarity = "dark";
     opacity = {
-      applications = 1.0;
+      applications = 0.9;
       terminal = 0.9;
       desktop = 0.9;
       popups = 0.9;
