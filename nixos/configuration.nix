@@ -179,6 +179,7 @@
             ghidra-bin imhex
             calibre # epub
             obsidian # note taking/viewing
+            logseq #foss obsidian
 
 #compute
             boinc
