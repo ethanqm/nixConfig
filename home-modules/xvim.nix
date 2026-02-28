@@ -192,6 +192,18 @@ let
     vim.lsp.config('emmet-ls', { capabilities = capabilities }) -- why?
     vim.lsp.config('asm-lsp', { capabilities = capabilities }) -- why?
   '';
+  nvimObsidian = ''
+    require("obsidian").setup({
+      workspaces = {
+        {
+          name = "ObMain",
+          path = "~/Documents/obsidian-vaults/ObMain",
+        },
+      },
+      completion = { nvim_cmp = true, },
+
+    })
+  '';
 in
 {
   programs.vim = {
@@ -223,6 +235,7 @@ in
     initLua =
       nvimLSP
     + nvimCmp
+    + nvimObsidian
     ;
     plugins = with pkgs.vimPlugins; [
       nvim-lspconfig
@@ -264,6 +277,7 @@ in
       nvim-treesitter-parsers.kotlin
       nvim-treesitter-parsers.lua
       nvim-treesitter-parsers.markdown
+      nvim-treesitter-parsers.markdown_inline
       nvim-treesitter-parsers.nasm
       nvim-treesitter-parsers.nix
       nvim-treesitter-parsers.odin
@@ -284,6 +298,10 @@ in
       nvim-treesitter-parsers.xml
       nvim-treesitter-parsers.yaml
       nvim-treesitter-parsers.zig
+
+      plenary-nvim # dependency - telescope, obsidian
+
+      obsidian-nvim
     ];
   };
 }
