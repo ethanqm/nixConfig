@@ -54,6 +54,8 @@ let
     let mapleader=" "
     " toggle invisible characters
     nnoremap <silent> <leader>s :setlocal list!<cr>
+    " insert date YYYY-MM-DD hh:mm:ss
+    nnoremap <silent> <leader>d :r!date "+\%F \%T"<cr>
   '';
   sanskritBinds = ''
     "SANSKRIT BINDS
@@ -201,7 +203,8 @@ let
         },
       },
       completion = { nvim_cmp = true, },
-
+      legacy_commands = false,
+      ui = {enable = false,}, -- suppress error: conceallevel=0, no cool unicode md rendering
     })
   '';
 in
