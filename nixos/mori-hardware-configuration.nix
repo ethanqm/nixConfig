@@ -36,6 +36,7 @@
     rocmPackages.clr.icd
     libva-utils
   ];
+  hardware.amdgpu.opencl.enable = true;
   environment.systemPackages = with pkgs; [ clinfo ];
   environment.variables = { ROC_ENABLE_PRE_VEGA = "1"; };
 
