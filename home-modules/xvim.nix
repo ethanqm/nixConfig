@@ -203,8 +203,9 @@ let
         },
       },
       completion = { nvim_cmp = true, },
-      legacy_commands = false,
+      legacy_commands = false, -- silence deprecation message
       ui = {enable = false,}, -- suppress error: conceallevel=0, no cool unicode md rendering
+      -- create new notes named title.md
       note_id_func = function(title) return title end,
       note_path_func = function(spec)
         local path = spec.dir / tostring(spec.id)
