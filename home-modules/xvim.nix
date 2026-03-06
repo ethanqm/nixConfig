@@ -201,6 +201,14 @@ let
           name = "ObMain",
           path = "~/Documents/obsidian-vaults/ObMain",
         },
+        {
+          name = "magic",
+          path = "~/Documents/obsidian-vaults/magic",
+        },
+        {
+          name = "Music",
+          path = "~/Documents/obsidian-vaults/Music/",
+        },
       },
       completion = { nvim_cmp = true, },
       legacy_commands = false, -- silence deprecation message
