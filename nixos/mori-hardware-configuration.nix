@@ -33,7 +33,9 @@
   services.xserver.enable = true;
   services.xserver.videoDrivers = [ "amdgpu" ];
   hardware.graphics.extraPackages = with pkgs; [
-    rocmPackages.clr.icd
+    #rocmPackages.clr.icd
+    mesa
+    #ocl-icd
     libva-utils
   ];
   hardware.amdgpu.opencl.enable = true;
