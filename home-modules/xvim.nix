@@ -207,7 +207,7 @@ let
         },
         {
           name = "Music",
-          path = "~/Documents/obsidian-vaults/Music/",
+          path = "~/Documents/obsidian-vaults/Music",
         },
       },
       completion = { nvim_cmp = true, },
