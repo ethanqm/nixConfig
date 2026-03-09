@@ -193,7 +193,7 @@
         environment.pathsToLink = [ "/share/bash-completion" ];
         environment.sessionVariables = {
           EDITOR = "nvim";
-          BROWSER = "firefox";
+          BROWSER = "librewolf";
           FILE_BROWSER = "dolphin";
           MENU = "wofi --show drun";
           TERM = "kitty";
