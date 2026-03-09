@@ -256,6 +256,9 @@
 # Enable the OpenSSH daemon.
         services.openssh.enable = true;
         programs.ssh.startAgent = true;
+        # 2026-03-09 15:20:39
+        # i have gnome??
+        services.gnome.gcr-ssh-agent.enable = false;
 
 # compute boinc
         services.boinc = {
