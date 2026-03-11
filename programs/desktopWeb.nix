@@ -8,8 +8,5 @@
       discord
       brave
       megasync
-
-
-      thunderbird
   ]);
 }
