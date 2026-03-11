@@ -35,7 +35,7 @@
   hardware.graphics.extraPackages = with pkgs; [
     #rocmPackages.clr.icd
     mesa
-    ocl-icd
+    #ocl-icd
     libva-utils
   ];
   hardware.amdgpu.opencl.enable = true;
