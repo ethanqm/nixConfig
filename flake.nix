@@ -74,6 +74,7 @@
           ./programs/gaming.nix
           {config.gaming.enable = true;}
           ./programs/work.nix
+          nix-index-database.nixosModules.default
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
