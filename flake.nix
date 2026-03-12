@@ -12,6 +12,10 @@
       url = "github:nix-community/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-index-database = {
+      url = "github:nix-community/nix-index-database";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     nix-on-droid = {
       url = "github:nix-community/nix-on-droid";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -19,7 +23,7 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, stable-pkgs, stylix, nix-on-droid, ... }@inputs:
+  outputs = { nixpkgs, home-manager, stable-pkgs, stylix, nix-on-droid, nix-index-database, ... }@inputs:
   let
     system = "x86_64-linux";
     pkgs = import nixpkgs {
@@ -48,6 +52,7 @@
           ./programs/dev.nix
           ./programs/gaming.nix
           {config.gaming.enable = true;}
+          nix-index-database.nixosModules.default
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
