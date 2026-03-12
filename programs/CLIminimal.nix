@@ -6,6 +6,8 @@
       git gh glab git-credential-oauth # source control
       bash-completion # tab-completion upgrade (?)
 
+      pciutils
+    
       htop btop # system monitoring
       fastfetch # neofetch replacement
       
