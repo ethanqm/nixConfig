@@ -161,8 +161,8 @@ in
           "application/x-bittorrent" = [ "com.qbittorrent.Bittorrent.desktop" ];
           "application/pdf" = [ "org.kde.okular.desktop" ];
           # URIs
-          "x-scheme-handler/https" = [ "firefox.desktop" ];
-          "x-scheme-handler/http" = [ "firefox.desktop" ];
+          "x-scheme-handler/https" = [ "librewolf.desktop" ];
+          "x-scheme-handler/http" = [ "librewolf.desktop" ];
           "x-scheme-handler/magnet" = [ "com.qbittorrent.Bittorrent.desktop" ];
         }
       ;
