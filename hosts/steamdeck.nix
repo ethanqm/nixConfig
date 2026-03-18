@@ -29,6 +29,8 @@
     megasync
     megacmd
     arx-libertatis
+    ludusavi
+    lf
   ]);
   services.megasync.enable = true;
 }
