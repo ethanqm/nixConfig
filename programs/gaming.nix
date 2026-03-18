@@ -13,6 +13,7 @@
         wine winetricks
         # itch # brokey
         lutris
+        ludusavi
         radeontop vulkan-tools
         obs-studio
         protonup-ng
