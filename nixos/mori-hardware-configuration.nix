@@ -30,19 +30,25 @@
   hardware.i2c.enable = true;
 
   # amd rx580
+  #hardware.graphics.enable = true; # present in configuration.nix
+  hardware.graphics.enable32Bit = true;
   services.xserver.enable = true;
   services.xserver.videoDrivers = [ "amdgpu" ];
   hardware.graphics.extraPackages = with pkgs; [
     mesa
-    #ocl-icd
   ];
   hardware.amdgpu.opencl.enable = true;
   environment.systemPackages = with pkgs; [ 
-    rocmPackages.clr#.icd
+    ocl-icd
     libva-utils
     clinfo
+    rocmPackages.rocminfo
+    rocmPackages.rocm-tests
+    rocmPackages.rocm-core
+    rocmPackages.amdsmi
   ];
   environment.variables = { ROC_ENABLE_PRE_VEGA = "1"; };
+  users.users.user.extraGroups = [ "render" ];
 
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/b26919e0-f075-4b67-8594-e219a6405824";

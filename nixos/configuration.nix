@@ -129,6 +129,8 @@
               "wheel"
               "boinc"
               "i2c" # brightness control
+              "video"
+              "audio"
           ];
 #packages = with pkgs; [
 #];
