@@ -10,6 +10,8 @@
     
       htop btop # system monitoring
       fastfetch # neofetch replacement
+
+      powertop # power monitoring
       
       avahi # zeroconf mDNS for hostname local access
 
