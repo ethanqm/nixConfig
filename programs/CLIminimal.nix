@@ -11,8 +11,9 @@
       htop btop # system monitoring
       fastfetch # neofetch replacement
 
-      powertop # power monitoring
-      
+      #powertop # INTEL! power monitoring
+      ryzen-monitor-ng # AMD! power monitoring
+
       avahi # zeroconf mDNS for hostname local access
 
       bc # basic calculator
@@ -27,7 +28,7 @@
       xdg-utils # mime-type tools
       xdg-desktop-portal
       kdePackages.xdg-desktop-portal-kde
-      atool unzip unrar _7zz lzip lziprecover plzip tarlz # archive tools
+      atool unzip unrar _7zz lzip lziprecover plzip tarlz p7zip # archive tools
       dpkg # deb file stuff
       exiftool mediainfo mkvtoolnix mkvtoolnix-cli
       transmission_4 # torrents
