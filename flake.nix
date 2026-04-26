@@ -74,6 +74,7 @@
           ./programs/gaming.nix
           {config.gaming.enable = true;}
           ./programs/work.nix
+          ./programs/jellyfin.nix
           nix-index-database.nixosModules.default
           home-manager.nixosModules.home-manager
           {
