@@ -15,4 +15,18 @@
     openFirewall = true;
     user = "user";
   };
+  
+  # RPC doesn't install service
+  # adapted from official github
+  systemd.user.services.jellyfin-rpc = {
+    enable = true;
+    after = [ "network.target" ];
+    wantedBy = [ "default.target" ];
+    description = "jellyfin-RPC Service";
+    serviceConfig = {
+      Type = "simple";
+      ExecStart= ''${pkgs.jellyfin-rpc}/bin/jellyfin-rpc'';
+      #Restart="on-failure";
+    };
+  };
 }
