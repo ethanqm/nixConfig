@@ -22,5 +22,11 @@
     ++ (with stable; [
       itch
     ]);
+
+    programs.obs-studio = {
+      enable = true;
+      enableVirtualCamera = true;
+      plugins = [ pkgs.obs-studio-plugins.droidcam-obs ];
+    };
   };
 }

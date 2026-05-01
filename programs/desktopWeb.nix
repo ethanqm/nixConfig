@@ -8,5 +8,6 @@
       discord
       brave
       megasync
+      droidcam
   ]);
 }
