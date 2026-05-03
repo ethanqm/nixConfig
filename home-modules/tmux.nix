@@ -35,7 +35,11 @@
       # enable continuum
       set -g @continuum-restore 'on'
       # enable systemd service
-      set -g @continuum-boot 'on' #broken on NixOS :/
+      set -g @continuum-boot 'on' 
     '';
+      
+      # fixed ?? omg
+      systemd.user.services.tmux.enable = true;
+
   };
 }
