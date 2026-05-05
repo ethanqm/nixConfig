@@ -12,7 +12,6 @@
         steam protontricks
         wine winetricks
         # itch # brokey
-        lutris
         ludusavi
         radeontop vulkan-tools
         obs-studio
@@ -21,6 +20,7 @@
     ])
     ++ (with stable; [
       itch
+      lutris # openldap won't build ??
     ]);
 
     programs.obs-studio = {
