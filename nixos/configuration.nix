@@ -248,6 +248,11 @@
 
         programs.kdeconnect.enable = true;
         programs.nix-ld.enable = true;
+  
+        
+        # fixed ?? omg
+        systemd.user.services.tmux.enable = true;
+
 
 # Some programs need SUID wrappers, can be configured further or are
 # started in user sessions.
@@ -275,7 +280,7 @@
         environment.sessionVariables.XDG_DESKTOP_PORTAL_DIR="/run/current-system/sw/share/xdg-desktop-portal/portals";
         environment.sessionVariables.GTK_USE_PORTAL=1;
 
-
+        
 # This value determines the NixOS release from which the default
 # settings for stateful data, like file locations and database versions
 # on your system were taken. It‘s perfectly fine and recommended to leave

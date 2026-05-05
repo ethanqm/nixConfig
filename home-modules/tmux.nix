@@ -38,8 +38,5 @@
       set -g @continuum-boot 'on' 
     '';
       
-      # fixed ?? omg
-      systemd.user.services.tmux.enable = true;
-
   };
 }
