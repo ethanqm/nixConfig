@@ -29,6 +29,10 @@
       xdg-desktop-portal
       kdePackages.xdg-desktop-portal-kde
       atool unzip unrar _7zz lzip lziprecover plzip tarlz p7zip # archive tools
+      rarcrack # bruteforce?
+      scrub # Gutmann file eraser
+      foremost # file recovery
+      fscrypt-experimental #encrypt directories | not finished
       dpkg # deb file stuff
       exiftool mediainfo mkvtoolnix mkvtoolnix-cli
       transmission_4 # torrents
