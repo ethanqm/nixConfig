@@ -25,6 +25,7 @@
       file # file type
       lf #file tui
       ranger # ${pkg.ranger}/share/doc/ranger/config/scope.sh is nice but broken in lf
+      rename # better than util-linux | supports regex s//g etc
       xdg-utils # mime-type tools
       xdg-desktop-portal
       kdePackages.xdg-desktop-portal-kde
