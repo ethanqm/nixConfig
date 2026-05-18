@@ -20,7 +20,7 @@
     ])
     ++ (with stable; [
       itch
-      lutris # openldap won't build ??
+      lutris # now it's bloodie valkey
     ]);
 
     programs.obs-studio = {

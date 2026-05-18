@@ -11,6 +11,7 @@
     ./home-modules/git.nix
     ./home-modules/kitty.nix
     ./home-modules/shell.nix
+    ./home-modules/yt.nix
   ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
