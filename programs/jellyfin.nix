@@ -5,6 +5,7 @@
     jellyfin
     jellyfin-web
     jellyfin-ffmpeg
+    jellyfin-mpv-shim
     # client
     jellyfin-desktop
     jellyfin-rpc # discord rich presence | #TODO - funky?
