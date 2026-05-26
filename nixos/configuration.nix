@@ -135,6 +135,7 @@
               "i2c" # brightness control
               "video"
               "audio"
+              "render"
           ];
 #packages = with pkgs; [
 #];

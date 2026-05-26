@@ -7,6 +7,7 @@
       bash-completion # tab-completion upgrade (?)
 
       pciutils
+      usbutils
     
       htop btop # system monitoring
       fastfetch # neofetch replacement
