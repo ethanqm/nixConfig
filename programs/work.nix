@@ -2,7 +2,7 @@
   environment.systemPackages = (with pkgs; [
     zoom-us
     google-chrome
-    libreoffice-bin
+    libreoffice
   ])
   ++
   (with stable; [
