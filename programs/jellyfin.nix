@@ -16,6 +16,7 @@
     enable = true;
     openFirewall = true;
     user = "user";
+    package = stable.jellyfin; # more up to date 2026-05-30
   };
   
   # RPC doesn't install service
@@ -27,7 +28,7 @@
     description = "jellyfin-RPC Service";
     serviceConfig = {
       Type = "simple";
-      ExecStart= ''${pkgs.jellyfin-rpc}/bin/jellyfin-rpc'';
+      ExecStart= ''${stable.jellyfin-rpc}/bin/jellyfin-rpc'';
       #Restart="on-failure";
     };
   };
