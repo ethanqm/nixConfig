@@ -1,6 +1,7 @@
-{pkgs, lib, ...}:
+{pkgs, stable, lib, ...}:
 {
   environment.systemPackages = (with pkgs; [
+  ]) ++ (with stable; [ # more up to date for some reason?
     # server
     jellyfin
     jellyfin-web
@@ -8,7 +9,7 @@
     jellyfin-mpv-shim
     # client
     jellyfin-desktop
-    jellyfin-rpc # discord rich presence | #TODO - funky?
+    jellyfin-rpc # discord rich presence
   ]);
   
   services.jellyfin = {
