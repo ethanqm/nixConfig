@@ -186,7 +186,7 @@
             ghidra-bin imhex
             calibre # epub
             obsidian # note taking/viewing
-            logseq #foss obsidian
+            #logseq #foss obsidian # EOL electron 2026-06-12
 
 #compute
             boinc
