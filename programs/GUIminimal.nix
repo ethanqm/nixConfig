@@ -14,7 +14,10 @@
       #xfce.thunar
 
       ## image viewer
-      kdePackages.gwenview libwebp libheif
+      libwebp libheif 
+      kdePackages.gwenview 
+      photoqt
+      
 
       ## pdf
       kdePackages.okular
