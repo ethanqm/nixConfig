@@ -210,7 +210,7 @@ let
           path = "~/Documents/obsidian-vaults/Music",
         },
       },
-      completion = { nvim_cmp = true, },
+      
       legacy_commands = false, -- silence deprecation message
       ui = {enable = false,}, -- suppress error: conceallevel=0, no cool unicode md rendering
       -- create new notes named title.md
