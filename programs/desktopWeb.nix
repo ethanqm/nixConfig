@@ -4,6 +4,7 @@
       firefox # AI website creator ad in settings menu 🚮
       librewolf
       mullvad-vpn
+      mullvad-browser
       qbittorrent
       discord
       brave
