@@ -18,6 +18,8 @@
       kdePackages.gwenview 
       photoqt
       
+      # music
+      tauon
 
       ## pdf
       kdePackages.okular
