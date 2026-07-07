@@ -167,6 +167,8 @@
 # $ nix search wget
         environment.systemPackages = (with pkgs; [
 
+            #just run
+            appimage-run
 
 # media
             vlc mpv 

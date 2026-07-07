@@ -2,7 +2,6 @@
   environment.systemPackages = (with pkgs; [
       # web
       firefox # AI website creator ad in settings menu 🚮
-      librewolf
       mullvad-vpn
       mullvad-browser
       qbittorrent
@@ -10,5 +9,9 @@
       brave
       megasync
       droidcam
+  ])
+  ++ (with stable; [
+    librewolf # unstable unmaintained... 2026-06-26
   ]);
+  
 }
