@@ -17,6 +17,10 @@
         obs-studio
         protonup-ng
         prismlauncher ftb-app# minecraft
+
+        dusklight # Zelda twilight princess recomp
+        zelda64recomp # Zelda Majora's Mask only rn
+        
     ])
     ++ (with stable; [
       itch
