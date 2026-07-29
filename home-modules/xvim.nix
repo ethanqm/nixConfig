@@ -301,12 +301,12 @@ in
       nvim-treesitter-parsers.passwd
       nvim-treesitter-parsers.powershell
       nvim-treesitter-parsers.printf
-      nvim-treesitter-parsers.prolog
+      #nvim-treesitter-parsers.prolog
       nvim-treesitter-parsers.python
       nvim-treesitter-parsers.rust
       nvim-treesitter-parsers.scheme
       nvim-treesitter-parsers.sql
-      nvim-treesitter-parsers.tmux
+      #nvim-treesitter-parsers.tmux
       nvim-treesitter-parsers.toml
       nvim-treesitter-parsers.typescript
       nvim-treesitter-parsers.vim
