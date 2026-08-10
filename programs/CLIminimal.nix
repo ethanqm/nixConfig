@@ -4,6 +4,7 @@
       tmux # terminal multiplexer
       wget # download from url
       git gh glab git-credential-oauth # source control
+      radicle-node radicle-desktop # p2p source control
       bash-completion # tab-completion upgrade (?)
 
       pciutils
