@@ -12,6 +12,9 @@
         steam protontricks
         wine winetricks
         # itch # brokey
+
+        easyeffects # audio effects
+
         ludusavi
         radeontop vulkan-tools
         obs-studio
