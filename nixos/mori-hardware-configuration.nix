@@ -39,14 +39,18 @@
   ];
   hardware.amdgpu.opencl.enable = true;
   environment.systemPackages = with pkgs; [ 
-    ocl-icd
+    #ocl-icd
     libva-utils
     clinfo
-    rocmPackages.rocminfo
     rocmPackages.rocm-tests
     rocmPackages.rocm-core
     rocmPackages.amdsmi
+    rocmPackages.rocminfo
+    rocmPackages.clr.icd
+    rocmPackages.clr
+    rocmPackages.rocm-runtime
   ];
+  systemd.tmpfiles.rules = ["L+    /opt/rocm/hip   -    -    -     -    ${pkgs.rocmPackages.clr}"];
   environment.variables = { ROC_ENABLE_PRE_VEGA = "1"; };
   users.users.user.extraGroups = [ "render" ];
 
