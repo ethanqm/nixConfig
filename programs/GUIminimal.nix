@@ -2,7 +2,7 @@
   environment.systemPackages = (with pkgs; [
       # terminal emulators
       kitty 
-      #ghostty
+      ghostty
       kdePackages.yakuake
 
       networkmanagerapplet  # wifi systray
