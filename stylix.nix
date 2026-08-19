@@ -2,6 +2,7 @@
 {
   stylix = {
     enable = true;
+    targets.qt.enable = false;
     # wallpaper
     image = ./home-modules/wallpapers/demonBanquet-RyoUtsumuri.webp;
     # Check: https://tinted-theming.github.io/tinted-gallery/
@@ -21,7 +22,7 @@
     fonts = {
       sizes = {
         applications = 10;
-        terminal = 14;
+        terminal = 12;
         desktop = 10;
         popups = 10;
       };
