@@ -182,7 +182,7 @@
             audacity
             krita
             gimp
-            inkscape
+            #inkscape # slow build
             davinci-resolve # todo: https://nixos.wiki/wiki/DaVinci_Resolve
             blender
             ghidra-bin imhex
