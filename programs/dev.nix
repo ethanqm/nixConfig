@@ -2,9 +2,9 @@
 
   environment.systemPackages = (with pkgs; [
       # dev
-      lua
+      lua luajit
       python314
-      nodejs_24 deno typescript typescript-language-server
+      nodejs deno typescript typescript-language-server
       zig zls
       racket # lisp
       gcc

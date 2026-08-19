@@ -9,6 +9,8 @@
       brave
       megasync
       droidcam
+
+      vscode
   ])
   ++ (with stable; [
     librewolf # unstable unmaintained... 2026-06-26
