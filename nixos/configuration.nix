@@ -30,7 +30,7 @@
 
 # Enable networking
         networking.networkmanager.enable = true;
-        networking.networkmanager.dns = "none";
+        #networking.networkmanager.dns = "none";
         networking.nameservers = [
             # Cloudflare DNS
             "1.1.1.1"
@@ -223,7 +223,7 @@
 
         services.mullvad-vpn = {
           enable = true;
-          package = pkgs.mullvad-vpn;
+	  gui.enable = true;
         };
         programs.hyprland = {
           enable = true;

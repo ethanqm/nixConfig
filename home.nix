@@ -13,6 +13,7 @@
     ./home-modules/shell.nix
     ./home-modules/yt.nix
   ];
+  #SUPERFAKEEDITTOFIXSHIT
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "user";
