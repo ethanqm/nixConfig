@@ -254,7 +254,9 @@
   
         
         # fixed ?? omg
-        systemd.user.services.tmux.enable = true;
+        systemd.user.services.tmux = {
+          enable = true;
+        };
 
 
 # Some programs need SUID wrappers, can be configured further or are

@@ -22,13 +22,15 @@ PROMPT_COMMAND=exitprompt
             *.tgz)       tar xzf $1   ;;
             *.zip)       unzip $1     ;;
             *.Z)         uncompress $1;;
-            *.7z)        7z x $1      ;;
+            *.7z)        7zz x $1      ;;
             *)           echo "'$1' cannot be extracted via ex()" ;;
           esac
         else
           echo "'$1' is not a valid file"
         fi
       }
+
+      eval "$(fzf --bash)"
 
 
 # Commands that should be applied only for interactive shells.
@@ -42,35 +44,35 @@ shopt -s checkwinsize
 shopt -s expand_aliases
 shopt -s histappend
 
-alias cp='cp -i'
-alias define=sdcv
-alias df='df -h'
-alias f=lf
-alias fo=fuckoff
-alias free='free -m'
-alias fucking=sudo
-alias fuckoff='pkill -9 -i'
-alias ga='git add'
-alias gc='git commit'
-alias gco='git checkout'
-alias gd='git diff'
-alias gdt='git difftool'
-alias gl='git reflog'
-alias grep='grep --color=auto'
-alias gs='git status'
-alias ls='ls --color=auto'
-alias lzip='lzip -k'
-alias mansplain=man
-alias more=less
-alias please=sudo
-alias plzip='plzip -k'
-alias py=python3
-alias susdo=sudo
-alias v=nvim
-alias vimdiff='nvim -d'
+alias -- cp='cp -i'
+alias -- define=sdcv
+alias -- df='df -h'
+alias -- f=lf
+alias -- fo=fuckoff
+alias -- free='free -m'
+alias -- fucking=sudo
+alias -- fuckoff='pkill -9 -i'
+alias -- ga='git add'
+alias -- gc='git commit'
+alias -- gco='git checkout'
+alias -- gd='git diff'
+alias -- gdt='git difftool'
+alias -- gl='git reflog'
+alias -- grep='grep --color=auto'
+alias -- gs='git status'
+alias -- ls='ls --color=auto'
+alias -- lzip='lzip -k'
+alias -- mansplain=man
+alias -- more=less
+alias -- please=sudo
+alias -- plzip='plzip -k'
+alias -- py=python3
+alias -- susdo=sudo
+alias -- v=nvim
+alias -- vimdiff='nvim -d'
 
 if [[ ! -v BASH_COMPLETION_VERSINFO ]]; then
-  . "/nix/store/an1k68bpqj8sas0zcd3dq33pjkphkb8a-bash-completion-2.17.0/etc/profile.d/bash_completion.sh"
+  . "/nix/store/ddx31zimy1garpjwvwy800l5kxf0jms9-bash-completion-2.18.0/etc/profile.d/bash_completion.sh"
 fi
 
 if test -n "$KITTY_INSTALLATION_DIR"; then
