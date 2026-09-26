@@ -155,6 +155,7 @@ let
     --[[zig       ]] vim.lsp.enable('zls')
 
     vim.opt.signcolumn="number" -- put icons in number column
+    vim.o.autocomplete = true
   '';
   nvimCmp = ''
     local cmp = require('cmp')

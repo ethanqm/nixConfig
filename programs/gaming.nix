@@ -22,6 +22,9 @@
         prismlauncher ftb-app# minecraft
 
         #zelda64recomp # Zelda Majora's Mask only rn
+        arx-libertatis # arx fatalis
+
+        runelite # runescape
         
     ])
     ++ (with stable; [

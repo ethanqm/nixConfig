@@ -10,7 +10,7 @@
       pciutils
       usbutils
     
-      htop btop # system monitoring
+      htop btop sysstat # system monitoring
       fastfetch # neofetch replacement
       perf
 
@@ -33,6 +33,7 @@
       xdg-desktop-portal
       kdePackages.xdg-desktop-portal-kde
       atool unzip unrar _7zz lzip lziprecover tarlz p7zip # archive tools
+      ddrescue # disk recovery
       rarcrack # bruteforce?
       scrub # Gutmann file eraser
       foremost # file recovery

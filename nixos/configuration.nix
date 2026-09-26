@@ -186,7 +186,8 @@
             davinci-resolve # todo: https://nixos.wiki/wiki/DaVinci_Resolve
             blender
             ghidra-bin imhex
-            calibre # epub
+            #calibre # epub - added AI book covers >:(
+            zotero # citations
             obsidian # note taking/viewing
             #logseq #foss obsidian # EOL electron 2026-06-12
 
