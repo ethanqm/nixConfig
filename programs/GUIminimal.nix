@@ -20,6 +20,7 @@
       
       # music
       tauon
+      blanket # ambient sounds
 
       ## pdf
       kdePackages.okular
