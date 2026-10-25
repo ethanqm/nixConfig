@@ -174,7 +174,8 @@
             vlc mpv 
             pear-desktop # youtube-music changed name for TM reasons
             
-            hakuneko # dl + read: manga + comic
+            # VVV insecure VVV old electron
+            #hakuneko # dl + read: manga + comic
 
             kiwix kiwix-tools # ZIM files - offline web browsing
 
@@ -187,7 +188,8 @@
             blender
             ghidra-bin imhex
             #calibre # epub - added AI book covers >:(
-            zotero # citations
+            # VVV insecure VVV - old firefox version
+            # zotero # citations
             obsidian # note taking/viewing
             #logseq #foss obsidian # EOL electron 2026-06-12
 
