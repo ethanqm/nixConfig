@@ -25,6 +25,7 @@
         arx-libertatis # arx fatalis
 
         runelite # runescape
+        bolt-launcher # needed for runelite until jagex launcher works
         
     ])
     ++ (with stable; [
